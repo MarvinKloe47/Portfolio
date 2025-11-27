@@ -1,0 +1,128 @@
+.about {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  min-height: 80vh;
+  padding: 80px 80px;
+  box-sizing: border-box;
+}
+
+/* Linke Bildseite */
+.about-photo {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Rechte Content-Seite */
+.about-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;        /* alles nach rechts ausrichten */
+  text-align: right;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* Überschrift „Why me“ */
+.about-title {
+  margin: 0 0 24px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #E15544;
+}
+
+/* Fließtext */
+.about-text {
+  max-width: 520px;
+  margin: 0 0 40px;
+  color: var(--primary);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* I am + Tags */
+.about-i-am {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.about-i-am-label {
+  font-size: 40px;
+  font-weight: 700;
+  color: #E15544;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 48px;
+  justify-content: flex-end;
+}
+
+.about-tag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary);
+  font-size: 16px;
+}
+
+.about-icon {
+  font-size: 26px;
+}
+
+/* Call-to-Action Button */
+.about-cta {
+  margin-top: auto;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 4px;
+  background: var(--primary);
+  color: #050320;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: flex-end;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    padding: 40px 24px;
+  }
+
+  .about-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .about-i-am {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-tags {
+    justify-content: flex-start;
+  }
+
+  .about-title {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,115 @@
+.hero {
+  position: relative;
+  min-height: calc(100vh - 80px);   // ganze Höhe, unterhalb Header
+  padding: 40px 80px 80px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: flex-end;            // Text & Bild am unteren Rand ausrichten
+}
+
+/* Inhalt: Text + Bild */
+.hero-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+}
+
+/* Text links unten */
+.hero-text {
+  max-width: 520px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.hero-role {
+  margin: 0 0 16px;
+  color: #00F2C9;                   // helles Türkis
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-name {
+  margin: 0;
+  color: #00F2C9;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* Bild rechts unten */
+.hero-photo-wrapper {
+  flex: 0 0 auto;
+  max-width: 420px;                 // Größe anpassen bis es passt
+}
+
+.hero-photo-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Vertikaler "Contact me"-Button links */
+.hero-contact-vertical {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 40px 10px;
+
+  writing-mode: vertical-rl;        // Text senkrecht
+  text-orientation: mixed;
+
+  border: 1px solid #00F2C9;
+  background: transparent;
+  color: #E15544;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Pfeil in der Mitte */
+.hero-arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -20%);
+  font-size: 28px;
+  color: #E15544;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    padding: 40px 24px 60px;
+    min-height: auto;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-name {
+    font-size: 48px;
+  }
+
+  .hero-role {
+    font-size: 18px;
+  }
+
+  .hero-contact-vertical,
+  .hero-arrow {
+    display: none;   // Mobil eher weglassen, sonst zu eng
+  }
+}
