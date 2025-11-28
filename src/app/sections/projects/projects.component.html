@@ -1,1 +1,48 @@
-<p>projects works!</p>
+<section class="projects" id="projects">
+  <h2 class="projects-title">My Projects</h2>
+
+  <div
+    class="project"
+    *ngFor="let project of projects"
+    [class.project--reverse]="project.reverse"
+  >
+    <!-- Bild -->
+    <div class="project-image">
+      <img [src]="project.image" [alt]="project.title" />
+    </div>
+
+    <!-- Textbereich -->
+    <div class="project-content">
+      <h3 class="project-title">{{ project.title }}</h3>
+
+      <p class="project-tech">{{ project.techStack }}</p>
+
+      <p class="project-description">
+        {{ project.description }}
+      </p>
+
+      <div class="project-actions">
+        <a
+          *ngIf="project.githubUrl"
+          class="btn btn-outline"
+          [href]="project.githubUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          *ngIf="project.liveUrl"
+          class="btn btn-primary"
+          [href]="project.liveUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Live Test
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+

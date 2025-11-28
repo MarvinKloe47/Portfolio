@@ -16,8 +16,8 @@
 }
 
 .about-photo img {
-  width: 100%;
-  height: auto;
+  width: 488px;
+  height: 620px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -49,10 +49,10 @@
   line-height: 1.6;
 }
 
-/* I am + Tags */
+/* I am + Visual-Block */
 .about-i-am {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
   margin-bottom: 40px;
 }
@@ -63,24 +63,70 @@
   color: #E15544;
 }
 
-.about-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px 48px;
-  justify-content: flex-end;
+/* „Fläche“ für Tags + Pfeile */
+.about-visual {
+  position: relative;
+  width: 360px;   // Breite wie im Figma
+  height: 180px;  // Höhe wie im Screenshot
 }
 
+/* Basis-Style für alle Tags */
 .about-tag {
+  position: absolute;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   color: var(--primary);
   font-size: 16px;
 }
 
-.about-icon {
-  font-size: 26px;
+.about-icon img {
+  width: 40px;
+  height: 48px;
 }
+
+/* Konkrete Positionen je Tag (Feintuning möglich) */
+.about-tag--location {
+  top: 0;
+  left: 80px;
+}
+
+.about-tag--relocate {
+  top: 40px;
+  right: 0;
+}
+
+.about-tag--remote {
+  bottom: 10px;
+  left: 80px;
+}
+
+/* Pfeile */
+.about-arrow {
+  position: absolute;
+  width: 24px;   
+  height: 56px;
+}
+
+/* Pfeil zwischen "I am" und Location */
+.about-arrow--1 {
+  top: 40px;
+  left: 50px;
+}
+
+/* Pfeil zwischen Location und Relocate */
+.about-arrow--2 {
+  top: 100px;
+  right: 70px;
+}
+
+/* Pfeil zur Remote-Box */
+.about-arrow--3 {
+  height: 70px;
+  bottom: 10px;
+  right: -30px;
+}
+
 
 /* Call-to-Action Button */
 .about-cta {

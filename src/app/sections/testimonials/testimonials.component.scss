@@ -1,0 +1,78 @@
+.testimonials {
+  padding: 80px 80px 60px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* Headline + Pfeil */
+.testimonials-header {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.testimonials-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #e15544;
+}
+
+/* Pfeil links */
+.testimonials-arrow {
+  position: absolute;
+  left: 80px;   // feinjustieren bis es wie im Figma aussieht
+  top: 40px;
+  width: 120px;
+  height: auto;
+}
+
+/* 3-Spalten-Layout */
+.testimonials-list {
+  display: flex;
+  gap: 60px;
+}
+
+/* Eine Referenz */
+.testimonial {
+  flex: 1;
+  max-width: 320px;
+}
+
+.testimonial-name {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #e15544;
+}
+
+.testimonial-project {
+  margin: 0 0 16px;
+  font-size: 16px;
+  color: var(--primary);
+}
+
+.testimonial-quote {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .testimonials {
+    padding: 60px 24px 40px;
+  }
+
+  .testimonials-list {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .testimonial {
+    max-width: none;
+  }
+
+  .testimonials-arrow {
+    display: none; 
+  }
+}

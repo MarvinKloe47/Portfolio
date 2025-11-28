@@ -1,0 +1,82 @@
+.footer {
+  width: 100%;
+  padding: 30px 40px 40px;
+  font-family: 'Roboto Mono', monospace;
+  color: #e15544;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo links */
+.footer-logo-main {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.footer-logo-sub {
+  margin-top: 4px;
+  font-size: 10px;
+  text-transform: lowercase;
+}
+
+/* Mitte */
+.footer-center {
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-copy {
+  margin-bottom: 4px;
+}
+
+.footer-links a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #e15544;
+
+  &:hover {
+    color: #02f4bf;
+  }
+}
+
+/* Social rechts */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-social img {
+  width: 26px;
+  height: 26px;
+  display: block;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-center {
+    order: 3;
+  }
+
+  .footer-social {
+    order: 2;
+  }
+}

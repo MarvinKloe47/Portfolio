@@ -1,1 +1,26 @@
-<p>testimonials works!</p>
+<section class="testimonials">
+
+  <div class="testimonials-header">
+    <h2 class="testimonials-title">
+      Need a teamplayer? Here what my colleagues said about me
+    </h2>
+
+    <!-- Pfeil links -->
+    <img
+      class="testimonials-arrow"
+      src="assets/img/arrow-teamplayer.png"
+      alt=""
+    />
+  </div>
+
+  <div class="testimonials-list">
+    <article class="testimonial" *ngFor="let t of testimonials">
+      <h3 class="testimonial-name">{{ t.name }}</h3>
+      <p class="testimonial-project">{{ t.project }}</p>
+      <p class="testimonial-quote">
+        ‘’ {{ t.quote }} ’’
+      </p>
+    </article>
+  </div>
+
+</section>
