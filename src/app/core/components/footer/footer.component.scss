@@ -1,9 +1,11 @@
-.footer {
-  width: 100%;
+footer {
   padding: 30px 40px 40px;
+  box-sizing: border-box;
   font-family: 'Roboto Mono', monospace;
   color: #e15544;
 }
+
+
 
 .footer-inner {
   max-width: var(--max-width);

@@ -1,11 +1,11 @@
 <section class="hero">
     <!-- vertikaler Button -->
-    <button class="hero-contact-vertical">
-        Contact Me
-    </button>
+   <button class="hero-contact-vertical" (click)="scrollToContact()">
+  CONTACT ME
+</button>
 
     <!-- Pfeil in der Mitte -->
-    <div class="hero-arrow">
+    <div class="hero-arrow" (click)="scrollToAbout()">
         <img src="assets/img/Arrow down.png" alt="" srcset="">
     </div>
 
@@ -18,6 +18,6 @@
 </div>
 
 <div class="hero-photo-wrapper">
-    <img src="/assets/img/hero-mk.png" alt="Marvin Klösters" srcset="">
+    <img src="assets/img/hero-mk.png" alt="Marvin Klösters" srcset="">
 </div>
 </section>

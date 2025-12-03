@@ -1,6 +1,7 @@
 .testimonials {
   padding: 80px 80px 60px;
   font-family: 'Roboto Mono', monospace;
+
 }
 
 /* Headline + Pfeil */
@@ -14,14 +15,15 @@
   font-size: 28px;
   font-weight: 700;
   color: #e15544;
+  
 }
 
 /* Pfeil links */
 .testimonials-arrow {
   position: absolute;
-  left: 80px;   // feinjustieren bis es wie im Figma aussieht
-  top: 40px;
-  width: 120px;
+  left: 80px;   
+  top: 90px;
+  width: 100px;
   height: auto;
 }
 
@@ -29,6 +31,8 @@
 .testimonials-list {
   display: flex;
   gap: 60px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Eine Referenz */

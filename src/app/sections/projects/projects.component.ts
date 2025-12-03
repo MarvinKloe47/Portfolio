@@ -44,7 +44,7 @@ export class ProjectsComponent {
       title: 'Pokedex',
       techStack: ['JavaScript', 'HTML', 'CSS'],
       description:
-        'Jump, run and throw game based on object-oriented approach. Help Pepe to collect coins and spicy salsa.',
+        'A responsive Pokédex web app that displays Pokémon as interactive cards with type-based colors and icons. Users can scroll through the list, search by name or ID, and switch between light and dark mode. The project focuses on clean UI design, modular JavaScript for rendering and filtering the data, and reusable CSS components for the card layout and animations.',
       image: 'assets/projects/pollo-loco.png',
       githubUrl: 'https://github.com/dein-user/pollo-loco',
       liveUrl: 'https://marvin-kloesters.developerakademie.net/PokeDex_Final_UltraWideFixed/index.html',

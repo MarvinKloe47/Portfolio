@@ -34,7 +34,10 @@ body {
 }
 
 main {
-  max-width: var(--max-width);
+  max-width: var(--max-width);      /* z. B. 1200px */
   margin: 0 auto;
-  padding: 0 16px 80px;
+  padding: 0 40px 80px;             /* LINKS/RECHTS Rand + unten Abstand */
+  box-sizing: border-box;
 }
+
+

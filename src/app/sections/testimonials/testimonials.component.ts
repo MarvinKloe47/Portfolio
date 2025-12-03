@@ -18,19 +18,19 @@ export class TestimonialsComponent {
 
    testimonials: Testimonial[] = [
     {
-      name: 'Noah Mueller',
-      project: 'Project Sharkie',
+      name: 'Raul C',
+      project: 'Project Join',
       quote:
-        "Marcus had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person.",
+        "Marvin had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person.",
     },
     {
-      name: 'Evelyn Marx',
-      project: 'Project Pollo Loco',
+      name: 'Stefan Schad',
+      project: 'Project Join',
       quote:
         'He is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code.',
     },
     {
-      name: 'James Rugman',
+      name: 'Kadir S',
       project: 'Project Join',
       quote:
         'He is a reliable and friendly person. Works in a structured way and writes clear code. I recommend him as a colleague.',

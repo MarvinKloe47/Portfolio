@@ -12,6 +12,8 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class ContactComponent {
   contactForm: FormGroup;
 
+
+
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group(
       {
@@ -23,7 +25,7 @@ export class ContactComponent {
         message: ['', [Validators.required, Validators.minLength(10)]],
         privacy: [false, [Validators.requiredTrue]],
       },
-      { updateOn: 'blur' } // Validierung auf blur, wie in der Vorlage gefordert
+      { updateOn: 'blur' } 
     );
   }
 
@@ -37,7 +39,6 @@ export class ContactComponent {
 
     // hier könntest du später eine echte Mail/Backend-Anfrage einbauen
     console.log('Kontaktformular:', this.contactForm.value);
-
     this.contactForm.reset();
   }
 
