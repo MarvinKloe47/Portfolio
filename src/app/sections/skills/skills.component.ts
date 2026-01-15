@@ -33,4 +33,8 @@ export class SkillsComponent {
     {name: 'challenge', icon: 'assets/icons/challenge.png' },
 
   ];
+
+  get allSkills() {
+    return [...this.skillsTop, ...this.skillsBottom];
+  }
 }

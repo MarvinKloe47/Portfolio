@@ -165,24 +165,111 @@
 @media (max-width: 900px) {
   .about {
     flex-direction: column;
-    padding: 40px 24px;
+    padding: 40px 24px 70px;
+    min-height: auto;
+    gap: 28px;
   }
 
+  /* Foto wie in deinem Layout für Mobile ausblenden */
+  .about-photo {
+    display: none;
+  }
+
+  /* Textblock mittig wie im Screenshot */
   .about-content {
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .about-i-am {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .about-tags {
-    justify-content: flex-start;
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
   }
 
   .about-title {
     font-size: 32px;
+    margin: 0 0 20px;
+  }
+
+  .about-text {
+    max-width: 420px;
+    margin: 0 0 26px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  /* "I am" + Located-Block: vertikal und zentriert */
+  .about-i-am {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 26px;
+  }
+
+  .about-i-am-label {
+    font-size: 28px;
+  }
+
+  /*
+    Auf Mobile: aus der "Freifläche" (absolute Tags) wird eine Liste.
+    Und: genug Platz, damit nichts gequetscht wirkt.
+  */
+  .about-visual {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+
+    position: relative;
+    padding: 0;
+  }
+
+  .about-tag {
+    position: static;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+
+    color: #00F2C9;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .about-icon img {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 auto;
+  }
+
+  .about-tag-text {
+    text-align: left;
+  }
+
+  /* Pfeile auf Mobile ausblenden (sonst überdecken sie Icons/Text) */
+  .about-arrow,
+  .about-arrow--1,
+  .about-arrow--2,
+  .about-arrow--3 {
+    display: none !important;
+  }
+
+  /* Button mittig + schöner breit wie im Screenshot */
+  .about-cta {
+    align-self: center;
+    margin-top: 12px;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .about-cta button,
+  .about-cta a {
+    width: 100%;
+    justify-content: center;
   }
 }
+

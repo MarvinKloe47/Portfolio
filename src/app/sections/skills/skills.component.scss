@@ -66,17 +66,103 @@
   filter: brightness(1.15);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .skills {
-    padding: 60px 24px 40px;
-  }
+/* Helper */
+.desktop-only { display: block; }
+.mobile-only { display: none; }
 
-  .skills-row {
-    gap: 32px;
+/* Mobile */
+@media (max-width: 900px) {
+  .desktop-only { display: none; }
+  .mobile-only { display: block; }
+
+  .skills {
+    padding: 44px 20px 64px;
+    text-align: center;
   }
 
   .skills-title {
-    font-size: 40px;
+    margin-bottom: 22px;
+  }
+
+ .skills-grid {
+  width: 100%;
+  max-width: 340px;
+
+  /* vorher: margin: 0 auto 22px; */
+  margin: 0 auto 22px;
+  transform: translateX(-18px); /* 🔥 leicht nach links */
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px 18px;
+  align-items: center;
+  justify-items: center;
+}
+
+
+  /* Icons deutlich größer */
+  .skill-icon img {
+    width: 56px;                  /* 🔥 größer */
+    height: 56px;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Challenge me Card */
+  .skill.challenge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .challenge-box {
+    width: 56px;                  /* 🔥 angepasst */
+    height: 56px;
+    border-radius: 8px;
+    background: #E15544;
+    color: #050320;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .challenge-text {
+    color: #00F2C9;
+    font-size: 13px;
+    line-height: 1.15;
+    text-align: left;
+  }
+
+  /* Text unter den Icons */
+  .skills-mobile-text {
+    max-width: 340px;
+    margin: 0 auto 16px;
+    color: #00F2C9;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  /* Let's talk Button */
+  .skills-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 260px;             /* 🔥 etwas breiter */
+    height: 46px;
+
+    background: #00F2C9;
+    color: #050320;
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 0.08em;
   }
 }

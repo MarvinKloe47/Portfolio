@@ -33,6 +33,11 @@ body {
   color: var(--text-main);
 }
 
+body.noScroll {
+  overflow: hidden;
+}
+
+
 main {
   max-width: var(--max-width);      /* z. B. 1200px */
   margin: 0 auto;

@@ -168,27 +168,150 @@
   }
 }
 
-/* Responsive */
+/* Responsive – Contact like Bild 2 */
 @media (max-width: 900px) {
   .contact {
-    padding: 60px 24px 80px;
+    padding: 56px 20px 80px;
   }
 
+  /* Header zentrieren */
+  .contact-header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-title {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.05;
+    margin: 0 0 14px;
+  }
+
+  /* Text zentriert */
   .contact-top {
+    display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
+  .contact-text {
+    max-width: 360px;
+    text-align: center;
+    margin: 0 0 24px;
+  }
+
+  /* Formular zentriert */
   .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    align-items: center;
+    gap: 18px;
   }
 
+  .contact-field {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .contact-field input,
+  .contact-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Reihenfolge wie Bild 2: Name, Email, Message */
+  .contact-field--name { order: 1; }
+  .contact-field--email { order: 2; }
+  .contact-field--message { order: 3; }
+
+  /* Message höher wie im Screenshot */
+  .contact-field--message textarea {
+    min-height: 140px;
+    resize: none;
+  }
+
+  /* ✅ Checkbox DIREKT unter Inputs */
+  .contact-privacy {
+    order: 10;
+    width: 100%;
+    max-width: 360px;
+    margin: 14px 0 10px;
+  }
+
+  .contact-privacy label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .contact-privacy input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+    accent-color: #E15544;
+  }
+
+  /* ✅ Button UNTER Checkbox */
   .contact-submit {
-    justify-content: flex-start;
+    order: 11;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
   }
 
+  .contact-submit button {
+    width: 140px;
+    height: 44px;
+
+    background: transparent;
+    border: 1px solid rgba(0, 242, 201, 0.6);
+    color: rgba(0, 242, 201, 0.9);
+
+    cursor: pointer;
+  }
+
+  .contact-submit button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  /* ✅ Info (E-mail / Tel) auf Mobile UNTER den Button */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    order: 12;
+    margin-top: 26px;
+  }
+
+  .contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #00F2C9;
+    font-size: 14px;
+  }
+
+  .contact-info-item img,
+  .contact-info-item svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Pfeil unten rechts */
   .contact-arrow {
-    display: none;
+    position: fixed;
+    right: 22px;
+    bottom: 26px;
+    width: 18px;
+    height: auto;
   }
 }
+
+

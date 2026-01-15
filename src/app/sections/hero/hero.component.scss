@@ -110,30 +110,64 @@
 /* Responsive */
 @media (max-width: 900px) {
   .hero {
-    padding: 40px 0 60px;
+    padding: 40px 20px 60px;
     min-height: auto;
+
+    /* Wichtig: Layout auf Mobile stapeln */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 28px;
   }
 
+  /* Foto oben zentriert */
+  .hero-photo-wrapper {
+    order: 1;
+    margin: 0;
+    max-width: 320px;
+    width: 100%;
+    transform: none; /* Desktop-Shift raus */
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-photo-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Text darunter zentriert */
   .hero-content {
-    flex-direction: column-reverse;
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
   }
 
   .hero-text {
+    margin-left: 0;      /* Desktop-Margin raus */
     max-width: 100%;
   }
 
+  /* Typo für Mobile wie im Screenshot kompakter */
   .hero-name {
-    font-size: 48px;
+    font-size: 44px;
+    line-height: 1.1;
   }
 
   .hero-role {
-    font-size: 18px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    letter-spacing: 0.18em;
   }
 
+  /* Mobile: Elemente ausblenden wie bei dir vorgesehen */
   .hero-contact-vertical,
   .hero-arrow {
     display: none;
   }
 }
+

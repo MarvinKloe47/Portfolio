@@ -61,22 +61,84 @@
   color: var(--primary);
 }
 
-/* Responsive */
+/* Responsive: Mobile Slider Cards */
 @media (max-width: 900px) {
   .testimonials {
-    padding: 60px 24px 40px;
+    padding: 50px 24px 70px;
   }
 
-  .testimonials-list {
+  .testimonials-header {
     flex-direction: column;
-    gap: 32px;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
   }
 
-  .testimonial {
-    max-width: none;
+  .testimonials-title {
+    font-size: 26px;
+    line-height: 1.2;
+    max-width: 360px;
   }
 
+  /* Pfeil auf Mobile komplett ausblenden */
   .testimonials-arrow {
-    display: none; 
+    display: none !important;
+  }
+
+  /* Horizontales Scrollen */
+  .testimonials-list {
+    margin-top: 26px;
+
+    display: flex;
+    justify-content: flex-start; /* 🔥 nicht zentrieren */
+    gap: 18px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 10px;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 24px;
+
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .testimonials-list::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  /* Karten-Style wie Boxen */
+  .testimonial {
+    flex: 0 0 auto;
+    width: 260px;
+    min-height: 220px;
+
+    padding: 22px 18px;
+    border: 1px solid #00F2C9;
+    background: rgba(5, 3, 32, 0.35);
+
+    scroll-snap-align: start; /* 🔥 erste Karte links */
+    scroll-snap-stop: always;
+  }
+
+  .testimonial-name {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+
+  .testimonial-project {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .testimonial-quote {
+    font-size: 14px;
+    line-height: 1.6;
   }
 }
+
+
