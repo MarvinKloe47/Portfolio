@@ -5,11 +5,12 @@ import { SkillsComponent } from '../../sections/skills/skills.component';
 import { ProjectsComponent } from '../../sections/projects/projects.component';
 import { TestimonialsComponent } from '../../sections/testimonials/testimonials.component';
 import { ContactComponent } from '../../sections/contact/contact.component';
+import { ImprintComponent } from '../imprint/imprint.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroComponent, AboutComponent, SkillsComponent, ProjectsComponent, TestimonialsComponent, ContactComponent],
+  imports: [HeroComponent, AboutComponent, SkillsComponent, ProjectsComponent, TestimonialsComponent, ContactComponent, ImprintComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

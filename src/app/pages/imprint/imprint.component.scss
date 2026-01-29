@@ -1,0 +1,90 @@
+.imprint {
+  position: relative;
+  padding: 90px 80px 120px;
+}
+
+.imprint-container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.imprint-title {
+  color: #E15544;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 56px;
+  letter-spacing: 0.02em;
+  margin: 0 0 40px;
+}
+
+.imprint-content {
+  color: #00F2C9;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  line-height: 1.75;
+
+  h2 {
+    color: #E15544;
+    font-size: 14px;
+    margin: 26px 0 10px;
+    letter-spacing: 0.04em;
+  }
+
+  p {
+    margin: 0 0 14px;
+    max-width: 820px;
+  }
+
+  ul {
+    margin: 0 0 14px;
+    padding-left: 18px;
+  }
+
+  li {
+    margin: 4px 0;
+  }
+}
+
+.imprint-contact {
+  margin-top: 18px;
+}
+
+.imprint-date {
+  margin-top: 18px;
+  opacity: 0.85;
+}
+
+/* Mobile Back Arrow (nur Mobile sichtbar) */
+.imprint-back {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 70px; /* sitzt wie im Screenshot unter dem Burger-Bereich */
+  background: none;
+  border: none;
+  color: #E15544;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .imprint {
+    padding: 70px 18px 90px;
+  }
+
+  .imprint-title {
+    font-size: 34px;
+    margin-bottom: 22px;
+  }
+
+  .imprint-content {
+    font-size: 12px;
+
+    p {
+      max-width: 100%;
+    }
+  }
+
+  .imprint-back {
+    display: inline-flex;
+  }
+}
