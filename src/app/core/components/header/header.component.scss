@@ -69,7 +69,7 @@
   }
 }
 
-/* Burger (Desktop aus) */
+
 .burger {
   display: none;
   background: none;
@@ -102,7 +102,7 @@
   line-height: 1;
 }
 
-/* Fullscreen Overlay */
+
 .mobileOverlay {
   position: fixed;
   inset: 0;
@@ -164,21 +164,21 @@
   }
 }
 
-/* Mobile */
+
 @media (max-width: 900px) {
   .header {
-    padding: 18px 20px 0; /* kompakter wie Screenshot */
+    padding: 18px 20px 0; 
   }
 
   .nav {
-    display: none; /* Desktop Nav aus */
+    display: none; 
   }
 
   .lang {
-    display: none; /* Language in Overlay statt im Header */
+    display: none; 
   }
 
   .burger {
-    display: inline-flex; /* Burger an */
+    display: inline-flex; 
   }
 }

@@ -12,16 +12,15 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Right Section -->
+ 
   <div class="header-right">
-    <!-- Language (Desktop) -->
     <div class="lang">
       <button type="button">DE</button>
       <span>|</span>
       <button type="button">EN</button>
     </div>
 
-    <!-- Burger (nur Mobile sichtbar per CSS) -->
+  
     <button
       class="burger"
       type="button"
@@ -29,18 +28,18 @@
       [attr.aria-expanded]="menuOpen"
       aria-label="Toggle menu"
     >
-      <!-- Burger Icon -->
+   
       <span class="burgerLines" *ngIf="!menuOpen">
         <i></i><i></i><i></i>
       </span>
 
-      <!-- Close Icon -->
+   
       <span class="closeIcon" *ngIf="menuOpen">×</span>
     </button>
   </div>
 </header>
 
-<!-- Fullscreen Mobile Menü (nur wenn offen) -->
+
 <div class="mobileOverlay" *ngIf="menuOpen" (click)="closeMenu()">
   <div class="mobilePanel" (click)="$event.stopPropagation()">
     <nav class="mobileNav">

@@ -16,7 +16,7 @@ footer {
   justify-content: space-between;
 }
 
-/* Logo links */
+
 .footer-logo-main {
   font-size: 28px;
   font-weight: 700;
@@ -29,7 +29,7 @@ footer {
   text-transform: lowercase;
 }
 
-/* Mitte */
+
 .footer-center {
   text-align: center;
   font-size: 14px;
@@ -49,7 +49,7 @@ footer {
   }
 }
 
-/* Social rechts */
+
 .footer-social {
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@ footer {
   }
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
   .footer-inner {
     flex-direction: column;

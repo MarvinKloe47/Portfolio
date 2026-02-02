@@ -3,7 +3,7 @@
   font-family: 'Roboto Mono', monospace;
 }
 
-/* Titel "My Skills" */
+
 .skills-title {
   margin: 0 0 40px;
   font-size: 56px;
@@ -11,21 +11,21 @@
   color: #E15544;
 }
 
-/* Container für beide Reihen */
+
 .skills-rows {
   display: flex;
   flex-direction: column;
   gap: 48px;
 }
 
-/* Eine Reihe von Skills */
+
 .skills-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;             /* Abstand zwischen Icons */
+  gap: 60px;             
 }
 
-/* Einzelner Skill */
+
 .skill {
   display: flex;
   flex-direction: column;
@@ -52,25 +52,25 @@
   display: block;
 }
 
-/* Beschriftung unter dem Icon */
+
 .skill-name {
   color: var(--primary);
   font-size: 16px;
   line-height: 1.3;
-  white-space: pre-line; // für "Material\n design"
+  white-space: pre-line; 
 }
 
-/* dezenter Hover-Effekt */
+
 .skill:hover {
   transform: translateY(-4px);
   filter: brightness(1.15);
 }
 
-/* Helper */
+
 .desktop-only { display: block; }
 .mobile-only { display: none; }
 
-/* Mobile */
+
 @media (max-width: 900px) {
   .desktop-only { display: none; }
   .mobile-only { display: block; }
@@ -88,9 +88,9 @@
   width: 100%;
   max-width: 340px;
 
-  /* vorher: margin: 0 auto 22px; */
+ 
   margin: 0 auto 22px;
-  transform: translateX(-18px); /* 🔥 leicht nach links */
+  transform: translateX(-18px); 
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -100,15 +100,15 @@
 }
 
 
-  /* Icons deutlich größer */
+
   .skill-icon img {
-    width: 56px;                  /* 🔥 größer */
+    width: 56px;                  
     height: 56px;
     object-fit: contain;
     display: block;
   }
 
-  /* Challenge me Card */
+ 
   .skill.challenge {
     display: flex;
     align-items: center;
@@ -117,7 +117,7 @@
   }
 
   .challenge-box {
-    width: 56px;                  /* 🔥 angepasst */
+    width: 56px;                  
     height: 56px;
     border-radius: 8px;
     background: #E15544;
@@ -139,7 +139,7 @@
     text-align: left;
   }
 
-  /* Text unter den Icons */
+
   .skills-mobile-text {
     max-width: 340px;
     margin: 0 auto 16px;
@@ -148,14 +148,14 @@
     line-height: 1.6;
   }
 
-  /* Let's talk Button */
+  
   .skills-cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
     width: 100%;
-    max-width: 260px;             /* 🔥 etwas breiter */
+    max-width: 260px;             
     height: 46px;
 
     background: #00F2C9;

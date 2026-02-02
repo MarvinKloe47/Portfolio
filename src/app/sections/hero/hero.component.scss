@@ -1,20 +1,20 @@
 .hero { 
   position: relative;
-  min-height: 70vh;  /* Fläche unter dem Header */
-  padding-top: 8px;                 /* Weniger Abstand zum Header */
+  min-height: 70vh;  
+  padding-top: 8px;                 
   padding-bottom: 32px;
   box-sizing: border-box;
   padding-left: 40px;
   padding-right: 40px;
   display: flex;
-  align-items: flex-end;            /* Inhalt sitzt unten – wie im Figma */
+  align-items: flex-end;            
   justify-content: space-between;
 
   max-width: 100%;
   overflow-x: hidden;
 }
 
-/* Inhalt: Text + Bild */
+
 .hero-content {
   width: 100%;
   display: flex;
@@ -23,7 +23,7 @@
   gap: 40px;
 }
 
-/* Text links unten */
+
 .hero-text {
   margin-left: 60px;
   max-width: 800px;
@@ -47,12 +47,12 @@
   line-height: 1.1;
 }
 
-/* Bild rechts – etwas höher setzen */
+
 .hero-photo-wrapper {
   flex: 0 0 auto;
   margin-right: 40px;
   max-width: 520px;
-  transform: translateY(-40px);      /* Bild ein Stück nach oben */
+  transform: translateY(-40px);      
 }
 
 .hero-photo-wrapper img {
@@ -61,13 +61,13 @@
   display: block;
 }
 
-/* Vertikaler "Contact me"-Button links – bündig mit Inhalt */
+
 .hero-contact-vertical {
   position: absolute;
-  left: 40px;                        /* passt genau zum main-Padding */
+  left: 40px;                        
   top: 42%;
-  margin-left: 70px;                          /* etwas oberhalb der Mitte */
-  transform: translateY(-50%);       /* nur vertikal zentrieren */
+  margin-left: 70px;                          
+  transform: translateY(-50%);       
   padding: 40px 10px;
 
   writing-mode: vertical-rl;
@@ -87,11 +87,11 @@
   }
 }
 
-/* Pfeil – ungefähr mittig zwischen Text und Bild */
+
 .hero-arrow {
   position: absolute;
   left: 45%;
-  top: 40%;                          /* weiter unten als Button, aber höher als vorher */
+  top: 40%;                         
   transform: translate(-50%, -50%);
   font-size: 28px;
   color: #E15544;
@@ -107,26 +107,68 @@
   }
 }
 
-/* Responsive */
+@media (max-width: 1450px) and (min-width: 901px) {
+  .hero {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  
+  .hero-content {
+    width: auto;    
+    flex: 1 1 auto;  
+    gap: 28px;
+  }
+
+  .hero-text {
+    margin-left: 24px;   
+    max-width: 620px;
+  }
+
+  
+  .hero-role {
+    font-size: 42px;     
+  }
+
+  .hero-name {
+    font-size: 64px;    
+  }
+
+  
+  .hero-photo-wrapper {
+    max-width: 420px;          
+    margin-right: 12px;        
+    transform: translateY(-20px); 
+  }
+
+  
+  .hero-contact-vertical {
+    left: 32px;
+    margin-left: 0;            
+  }
+}
+
+
+
 @media (max-width: 900px) {
   .hero {
     padding: 40px 20px 60px;
     min-height: auto;
 
-    /* Wichtig: Layout auf Mobile stapeln */
+   
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     gap: 28px;
   }
 
-  /* Foto oben zentriert */
+
   .hero-photo-wrapper {
     order: 1;
     margin: 0;
     max-width: 320px;
     width: 100%;
-    transform: none; /* Desktop-Shift raus */
+    transform: none; 
     display: flex;
     justify-content: center;
   }
@@ -137,7 +179,7 @@
     display: block;
   }
 
-  /* Text darunter zentriert */
+
   .hero-content {
     order: 2;
     width: 100%;
@@ -148,11 +190,11 @@
   }
 
   .hero-text {
-    margin-left: 0;      /* Desktop-Margin raus */
+    margin-left: 0;      
     max-width: 100%;
   }
 
-  /* Typo für Mobile wie im Screenshot kompakter */
+ 
   .hero-name {
     font-size: 44px;
     line-height: 1.1;
@@ -164,7 +206,7 @@
     letter-spacing: 0.18em;
   }
 
-  /* Mobile: Elemente ausblenden wie bei dir vorgesehen */
+  
   .hero-contact-vertical,
   .hero-arrow {
     display: none;

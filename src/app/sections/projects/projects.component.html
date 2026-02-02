@@ -6,12 +6,12 @@
     *ngFor="let project of projects"
     [class.project--reverse]="project.reverse"
   >
-    <!-- Bild -->
+    
     <div class="project-image">
       <img [src]="project.image" [alt]="project.title" />
     </div>
 
-    <!-- Textbereich -->
+    
     <div class="project-content">
       <h3 class="project-title">{{ project.title }}</h3>
 

@@ -9,14 +9,13 @@
   box-sizing: border-box;
 }
 
-/* Linke Bildseite */
 .about-photo {
   flex: 0 0 auto; 
   margin-left: 40px;
-  margin-right: 40px;                /* etwas breiter wie im Figma */
+  margin-right: 40px;               
   display: flex;
   align-items: center;
-  justify-content: flex-start;   /* Bild beginnt „unter“ dem Header */
+  justify-content: flex-start;   
 }
 
 .about-photo img {
@@ -27,24 +26,24 @@
 }
 
 
-/* Rechte Content-Seite */
+
 .about-content {
   flex: 1;
-  max-width: 600px;        /* Begrenzte Breite wie Figma */
+  max-width: 600px;        
   
-  margin-left: auto;       /* nach innen schieben */
-  margin-right: auto;      /* nicht ganz rechts kleben */
+  margin-left: auto;       
+  margin-right: auto;      
 
   display: flex;
   flex-direction: column;
-  align-items: center;     /* zuerst zentrieren */
-  text-align: center;      /* Text mittig */
+  align-items: center;    
+  text-align: center;      
 
-  /* danach händisch Überschrift wieder rechtsbündig */
+
 }
 
 
-/* Überschrift „Why me“ */
+
 .about-title {
   margin: 0 0 24px;
   font-size: 56px;
@@ -60,7 +59,7 @@
   line-height: 1.6;
 }
 
-/* I am + Visual-Block */
+
 .about-i-am {
   display: flex;
   align-items: flex-start;
@@ -74,14 +73,14 @@
   color: #E15544;
 }
 
-/* Fläche für Tags + Pfeile */
+
 .about-visual {
   position: relative;
   width: 380px;
   height: 190px;
 }
 
-/* Basis-Style für alle Tags */
+
 .about-tag {
   position: absolute;
   display: flex;
@@ -96,7 +95,7 @@
   height: 40px;
 }
 
-/* Positionen wie in der Vorlage, leicht angepasst */
+
 .about-tag--location {
   top: 0;
   left: 110px;
@@ -112,12 +111,12 @@
   left: 90px;
 }
 
-/* Pfeile */
+
 .about-arrow {
   position: absolute;
 }
 
-/* Pfeil zwischen "I am" und Location */
+
 .about-arrow--1 {
   width: 34px;
   height: auto;
@@ -125,7 +124,7 @@
   left: 40px;
 }
 
-/* Pfeil zwischen Location und Relocate */
+
 .about-arrow--2 {
   width: 40px;
   height: auto;
@@ -133,7 +132,7 @@
   right: 72px;
 }
 
-/* Pfeil zur Remote-Box */
+
 .about-arrow--3 {
   width: 46px;
   height: auto;
@@ -141,7 +140,7 @@
   right: -20px;
 }
 .about-cta {
-  margin-top: 16px;             /* statt auto */
+  margin-top: 16px;             
   padding: 14px 40px;
   border: none;
   border-radius: 4px;
@@ -161,7 +160,7 @@
 }
 
 
-/* Responsive */
+
 @media (max-width: 900px) {
   .about {
     flex-direction: column;
@@ -170,12 +169,12 @@
     gap: 28px;
   }
 
-  /* Foto wie in deinem Layout für Mobile ausblenden */
+ 
   .about-photo {
     display: none;
   }
 
-  /* Textblock mittig wie im Screenshot */
+ 
   .about-content {
     max-width: 520px;
     width: 100%;
@@ -196,7 +195,7 @@
     line-height: 1.7;
   }
 
-  /* "I am" + Located-Block: vertikal und zentriert */
+  
   .about-i-am {
     flex-direction: column;
     align-items: center;
@@ -208,10 +207,7 @@
     font-size: 28px;
   }
 
-  /*
-    Auf Mobile: aus der "Freifläche" (absolute Tags) wird eine Liste.
-    Und: genug Platz, damit nichts gequetscht wirkt.
-  */
+ 
   .about-visual {
     width: 100%;
     max-width: 340px;
@@ -250,7 +246,7 @@
     text-align: left;
   }
 
-  /* Pfeile auf Mobile ausblenden (sonst überdecken sie Icons/Text) */
+ 
   .about-arrow,
   .about-arrow--1,
   .about-arrow--2,
@@ -258,7 +254,7 @@
     display: none !important;
   }
 
-  /* Button mittig + schöner breit wie im Screenshot */
+  
   .about-cta {
     align-self: center;
     margin-top: 12px;
