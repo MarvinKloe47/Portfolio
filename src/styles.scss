@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap');
 
 :root {
+  /* Sticky header offsets */
+  --header-height: 104px;
+  --header-height-mobile: 98px;
+
   /* Main Background Colors (from your design) */
   --bg-dark: #0B042D;
   --bg-darker: #050320;
@@ -37,6 +41,22 @@ body.noScroll {
   overflow: hidden;
 }
 
+html {
+  scroll-padding-top: var(--header-height);
+  scroll-behavior: smooth;
+}
+
+app-home,
+app-imprint,
+app-privacy {
+  display: block;
+  padding-top: var(--header-height);
+}
+
+section[id] {
+  scroll-margin-top: var(--header-height);
+}
+
 
 main {
   max-width: var(--max-width);      /* z. B. 1200px */
@@ -45,4 +65,19 @@ main {
   box-sizing: border-box;
 }
 
+@media (max-width: 900px) {
+  html {
+    scroll-padding-top: var(--header-height-mobile);
+  }
+
+  app-home,
+  app-imprint,
+  app-privacy {
+    padding-top: var(--header-height-mobile);
+  }
+
+  section[id] {
+    scroll-margin-top: var(--header-height-mobile);
+  }
+}
 
