@@ -1,26 +1,37 @@
 <header class="header">
-  <!-- Logo/Name -->
   <div class="logo">
-    <img class="Logo" src="/assets/img/Logo.png" alt="Logo" />
+    <img class="Logo" src="assets/img/Logo.png" alt="Logo" />
   </div>
 
-  <!-- Navigation (Desktop bleibt wie es ist) -->
+  
   <nav class="nav">
-    <a href="#about">Why me</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="#about">{{ translate.t('nav_whyMe') }}</a>
+    <a href="#skills">{{ translate.t('nav_skills') }}</a>
+    <a href="#projects">{{ translate.t('nav_projects') }}</a>
+    <a href="#contact">{{ translate.t('nav_contact') }}</a>
   </nav>
 
- 
   <div class="header-right">
+    
     <div class="lang">
-      <button type="button">DE</button>
+      <button
+        type="button"
+        (click)="setLang('de')"
+        [class.active]="currentLang === 'de'"
+      >
+        DE
+      </button>
       <span>|</span>
-      <button type="button">EN</button>
+      <button
+        type="button"
+        (click)="setLang('en')"
+        [class.active]="currentLang === 'en'"
+      >
+        EN
+      </button>
     </div>
 
-  
+    
     <button
       class="burger"
       type="button"
@@ -28,12 +39,10 @@
       [attr.aria-expanded]="menuOpen"
       aria-label="Toggle menu"
     >
-   
       <span class="burgerLines" *ngIf="!menuOpen">
         <i></i><i></i><i></i>
       </span>
 
-   
       <span class="closeIcon" *ngIf="menuOpen">×</span>
     </button>
   </div>
@@ -43,16 +52,37 @@
 <div class="mobileOverlay" *ngIf="menuOpen" (click)="closeMenu()">
   <div class="mobilePanel" (click)="$event.stopPropagation()">
     <nav class="mobileNav">
-      <a href="#about" (click)="closeMenu()">Why me</a>
-      <a href="#skills" (click)="closeMenu()">Skills</a>
-      <a href="#projects" (click)="closeMenu()">Projects</a>
-      <a href="#contact" (click)="closeMenu()">Contact</a>
+      <a href="#about" (click)="closeMenu()">
+        {{ translate.t('nav_whyMe') }}
+      </a>
+      <a href="#skills" (click)="closeMenu()">
+        {{ translate.t('nav_skills') }}
+      </a>
+      <a href="#projects" (click)="closeMenu()">
+        {{ translate.t('nav_projects') }}
+      </a>
+      <a href="#contact" (click)="closeMenu()">
+        {{ translate.t('nav_contact') }}
+      </a>
     </nav>
 
+    
     <div class="mobileLang">
-      <button type="button">DE</button>
+      <button
+        type="button"
+        (click)="setLang('de')"
+        [class.active]="currentLang === 'de'"
+      >
+        DE
+      </button>
       <span>|</span>
-      <button type="button">EN</button>
+      <button
+        type="button"
+        (click)="setLang('en')"
+        [class.active]="currentLang === 'en'"
+      >
+        EN
+      </button>
     </div>
   </div>
 </div>

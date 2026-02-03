@@ -1,67 +1,57 @@
 <section class="about" id="about">
-
-    
-     <div class="about-photo">
-        <img src="assets/img/whyme-photo.png" alt="Portrait Marvin" srcset="">
-     </div>
-
-    
-     <div class="about-content">
-
-        <h2 class="about-title">Why me</h2>
-
-        <p class="about-text">
-            Hi, I'm Marvin Klösters — a passionate Frontend Developer focused on building modern, user-friendly web applications.
-With a strong foundation in HTML, CSS, and JavaScript, I create responsive, high-performance, and visually appealing interfaces that truly engage users.
-I place great value on clean code, clear architecture, and intuitive UI/UX, aiming to build web experiences that stand out both technically and visually.
-        </p>
-<div class="about-i-am">
-  <span class="about-i-am-label">I am</span>
-
-  <div class="about-visual">
-    
-    <div class="about-tag about-tag--location">
-      <span class="about-icon">
-        <img src="assets/img/Vector.png" alt="Location" />
-      </span>
-      <span class="about-tag-text">
-        located<br />
-        in Kleve
-      </span>
-    </div>
-
-    
-    <div class="about-tag about-tag--relocate">
-      <span class="about-icon">
-        <img src="assets/img/Group 24.png" alt="Relocate" />
-      </span>
-      <span class="about-tag-text">
-        open to<br />
-        relocate
-      </span>
-    </div>
-
-    
-    <div class="about-tag about-tag--remote">
-      <span class="about-icon">
-        <img src="assets/img/Icon Remote.png" alt="Remote" />
-      </span>
-      <span class="about-tag-text">
-        open to<br />
-        work remote
-      </span>
-    </div>
-
-   
-    <img class="about-arrow about-arrow--1" src="assets/img/Arrow 5.png" alt="" />
-    <img class="about-arrow about-arrow--2" src="assets/img/Arrow 4.png" alt="" />
-    <img class="about-arrow about-arrow--3" src="assets/img/Arrow 01.png" alt="" />
+  <div class="about-photo">
+    <img src="assets/img/whyme-photo.png" alt="Portrait Marvin" />
   </div>
-</div>
+
+  <div class="about-content">
+    <h2 class="about-title">{{ translate.t('about_title') }}</h2>
+
+    <p class="about-text">
+      {{ translate.t('about_text') }}
+    </p>
+
+    <div class="about-i-am">
+      <span class="about-i-am-label">{{ translate.t('about_iAm') }}</span>
+
+      <div class="about-visual">
+        <div class="about-tag about-tag--location">
+          <span class="about-icon">
+            <img src="assets/img/Vector.png" alt="Location" />
+          </span>
+          <span class="about-tag-text">
+            {{ translate.t('about_location_value_1') }}<br />
+            {{ translate.t('about_location_value_2') }}
+          </span>
+        </div>
+
+        <div class="about-tag about-tag--relocate">
+          <span class="about-icon">
+            <img src="assets/img/Group 24.png" alt="Relocate" />
+          </span>
+          <span class="about-tag-text">
+            {{ translate.t('about_relocate_value_1') }}<br />
+            {{ translate.t('about_relocate_value_2') }}
+          </span>
+        </div>
+
+        <div class="about-tag about-tag--remote">
+          <span class="about-icon">
+            <img src="assets/img/Icon Remote.png" alt="Remote" />
+          </span>
+          <span class="about-tag-text">
+            {{ translate.t('about_remote_value_1') }}<br />
+            {{ translate.t('about_remote_value_2') }}
+          </span>
+        </div>
+
+        <img class="about-arrow about-arrow--1" src="assets/img/Arrow 5.png" alt="" />
+        <img class="about-arrow about-arrow--2" src="assets/img/Arrow 4.png" alt="" />
+        <img class="about-arrow about-arrow--3" src="assets/img/Arrow 01.png" alt="" />
+      </div>
+    </div>
 
     <button class="about-cta" (click)="scrollToContact()">
-      Let’s talk
+      {{ translate.t('cta_letsTalk') }}
     </button>
-
   </div>
 </section>

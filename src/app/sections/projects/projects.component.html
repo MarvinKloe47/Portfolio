@@ -1,24 +1,31 @@
 <section class="projects" id="projects">
-  <h2 class="projects-title">My Projects</h2>
+  <h2 class="projects-title">
+    {{ translate.t('projects_title') }}
+  </h2>
 
   <div
     class="project"
     *ngFor="let project of projects"
     [class.project--reverse]="project.reverse"
   >
-    
     <div class="project-image">
-      <img [src]="project.image" [alt]="project.title" />
+      <img
+        [src]="project.image"
+        [alt]="translate.t(project.titleKey)"
+      />
     </div>
 
-    
     <div class="project-content">
-      <h3 class="project-title">{{ project.title }}</h3>
+      <h3 class="project-title">
+        {{ translate.t(project.titleKey) }}
+      </h3>
 
-      <p class="project-tech">{{ project.techStack }}</p>
+      <p class="project-tech">
+        {{ project.techStack.join(', ') }}
+      </p>
 
       <p class="project-description">
-        {{ project.description }}
+        {{ translate.t(project.descKey) }}
       </p>
 
       <div class="project-actions">
@@ -29,7 +36,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          GitHub
+          {{ translate.t('btn_github') }}
         </a>
 
         <a
@@ -39,10 +46,9 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Live Test
+          {{ translate.t('btn_liveTest') }}
         </a>
       </div>
     </div>
   </div>
 </section>
-

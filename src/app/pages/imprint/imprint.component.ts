@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
+import { TranslationService } from '../../services/translation/translation.service';
+TranslationService;
 
 @Component({
   selector: 'app-imprint',
@@ -8,7 +10,9 @@ import { Location } from '@angular/common';
   styleUrl: './imprint.component.scss',
 })
 export class ImprintComponent {
-  constructor(private location: Location) {}
+  constructor(public translate: TranslationService, private location: Location) {}
+
+  
 
   goBack(): void {
     this.location.back();

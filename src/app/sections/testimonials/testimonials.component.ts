@@ -1,10 +1,11 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslationService, TranslationKey } from '../../services/translation/translation.service';
 
 interface Testimonial {
-  name: string;
-  project: string;
-  quote: string;
+  nameKey: TranslationKey;
+  projectKey: TranslationKey;
+  quoteKey: TranslationKey;
 }
 
 @Component({
@@ -15,25 +16,23 @@ interface Testimonial {
   styleUrl: './testimonials.component.scss'
 })
 export class TestimonialsComponent {
+  constructor(public translate: TranslationService) {}
 
-   testimonials: Testimonial[] = [
+  testimonials: Testimonial[] = [
     {
-      name: 'Raul C',
-      project: 'Project Join',
-      quote:
-        "Marvin had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person.",
+      nameKey: 'testimonial_raul_name',
+      projectKey: 'testimonial_raul_project',
+      quoteKey: 'testimonial_raul_quote',
     },
     {
-      name: 'Stefan Schad',
-      project: 'Project Join',
-      quote:
-        'He is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code.',
+      nameKey: 'testimonial_stefan_name',
+      projectKey: 'testimonial_stefan_project',
+      quoteKey: 'testimonial_stefan_quote',
     },
     {
-      name: 'Kadir S',
-      project: 'Project Join',
-      quote:
-        'He is a reliable and friendly person. Works in a structured way and writes clear code. I recommend him as a colleague.',
+      nameKey: 'testimonial_kadir_name',
+      projectKey: 'testimonial_kadir_project',
+      quoteKey: 'testimonial_kadir_quote',
     },
   ];
 }

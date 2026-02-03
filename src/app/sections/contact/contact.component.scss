@@ -16,13 +16,45 @@
   color: #e15544;
 }
 
-.contact-arrow {
+
+
+.contact-arrowBtn {
   position: absolute;
-  left: 260px;  
-  top: 10px;
-  width: 80px;
-  height: auto;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
 }
+
+.contact-arrow {
+  width: 18px;
+  height: auto;
+  display: block;
+  transition: transform 160ms ease, opacity 160ms ease;
+  opacity: 0.9;
+}
+
+.contact-arrowBtn:hover .contact-arrow {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.contact-arrowBtn:focus-visible {
+  outline: 2px solid rgba(0, 242, 201, 0.8);
+  outline-offset: 6px;
+}
+
 
 
 .contact-top {

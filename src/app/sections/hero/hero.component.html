@@ -1,22 +1,24 @@
 <section class="hero">
-   <button class="hero-contact-vertical" (click)="scrollToContact()">
-  CONTACT ME
-</button>
+  <button class="hero-contact-vertical" (click)="scrollToContact()">
+    {{ translate.t('contact_title') }}
+  </button>
 
+  <div class="hero-arrow" (click)="scrollToAbout()">
+    <img src="assets/img/Arrow down.png" alt="" />
+  </div>
 
-    <div class="hero-arrow" (click)="scrollToAbout()">
-        <img src="assets/img/Arrow down.png" alt="" srcset="">
-    </div>
-
-
-<div class="hero-content">
+  <div class="hero-content">
     <div class="hero-text">
-        <p class="hero-role">FRONTEND DEVELOPER</p>
-        <h1 class="hero-name">Marvin Klösters</h1>
+      <p class="hero-role">
+        {{ translate.t('hero_role') }}
+      </p>
+      <h1 class="hero-name">
+        {{ translate.t('hero_name') }}
+      </h1>
     </div>
-</div>
+  </div>
 
-<div class="hero-photo-wrapper">
-    <img src="assets/img/hero-mk.png" alt="Marvin Klösters" srcset="">
-</div>
+  <div class="hero-photo-wrapper">
+    <img src="assets/img/hero-mk.png" alt="Marvin Klösters" />
+  </div>
 </section>

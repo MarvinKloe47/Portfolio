@@ -1,92 +1,93 @@
 <section class="contact" id="contact">
-
   <div class="contact-header">
-    <h2 class="contact-title">Contact me</h2>
+    <h2 class="contact-title">
+      {{ translate.t('contact_title') }}
+    </h2>
+    <button
+    type="button"
+    class="contact-arrowBtn"
+    (click)="scrollToTop()"
+    aria-label="Back to top"
+  >
     <img class="contact-arrow" src="assets/img/arrow-contact.png" alt="" />
+  </button>
   </div>
 
   <div class="contact-top">
     <p class="contact-text">
-      Encourage people to contact you and describe what role you are interested in.
-      Express interest in contributing to a new project.
+      {{ translate.t('contact_text') }}
     </p>
 
     <div class="contact-info">
       <div class="contact-info-row">
         <span class="contact-info-icon">✉</span>
-        <span>E-mail</span>
+        <span>{{ translate.t('contact_email_label') }}</span>
       </div>
       <div class="contact-info-row">
         <span class="contact-info-icon">☎</span>
-        <span>Tel: 0157 123 456 68</span>
+        <span>{{ translate.t('contact_tel_label') }}</span>
       </div>
     </div>
   </div>
 
   <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-
-    <!-- Name -->
     <div class="contact-field contact-field--name">
-      <input 
+      <input
         type="text"
         formControlName="name"
-        placeholder="Your Name"
+        [placeholder]="translate.t('form_name')"
       />
       <div class="contact-error" *ngIf="name?.invalid && name?.touched">
-        Please enter your name.
+        {{ translate.t('contact_error_name') }}
       </div>
     </div>
 
-   
     <div class="contact-field contact-field--message">
       <textarea
         formControlName="message"
         rows="5"
-        placeholder="Your Message"
+        [placeholder]="translate.t('form_message')"
       ></textarea>
       <div class="contact-error" *ngIf="message?.invalid && message?.touched">
-        Please enter a message (min. 10 characters).
+        {{ translate.t('contact_error_message') }}
       </div>
     </div>
 
-    
     <div class="contact-field contact-field--email">
-      <input 
+      <input
         type="email"
         formControlName="email"
-        placeholder="Your Email"
+        [placeholder]="translate.t('form_email')"
       />
       <div class="contact-error" *ngIf="email?.invalid && email?.touched">
-        Please enter a valid email.
+        {{ translate.t('contact_error_email') }}
       </div>
     </div>
 
-  
     <div class="contact-privacy">
       <label>
         <input type="checkbox" formControlName="privacy" />
         <span>
-          I've read the
-          <a routerLink="/datenschutz">privacy policy</a>
-          and agree to the processing of my data as outlined.
+          {{ translate.t('form_privacy_prefix') }}
+          <a routerLink="/datenschutz">
+            {{ translate.t('form_privacy_link') }}
+          </a>
+          {{ translate.t('form_privacy_suffix') }}
         </span>
       </label>
 
       <div class="contact-error" *ngIf="privacy?.invalid && privacy?.touched">
-        Please accept the privacy policy.
+        {{ translate.t('contact_error_privacy') }}
       </div>
     </div>
 
-    
     <div class="contact-submit">
       <button
         type="submit"
         [disabled]="contactForm.invalid"
       >
-        Send
+        {{ translate.t('form_send') }}
       </button>
     </div>
-
   </form>
-
 </section>

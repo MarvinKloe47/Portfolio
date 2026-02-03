@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ContactComponent } from '../contact/contact.component';
+import { TranslationService } from '../../services/translation/translation.service';
+TranslationService
 
 @Component({
   selector: 'app-hero',
@@ -9,6 +11,9 @@ import { ContactComponent } from '../contact/contact.component';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
+
+  constructor(public translate: TranslationService) {}
+
 
   scrollToContact() {
   const element = document.getElementById("contact");

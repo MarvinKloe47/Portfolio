@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NgIf } from '@angular/common';
+import { NgIf } from '@angular/common'; 
+import { TranslationService, Lang } from '../../../services/translation/translation.service';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,8 @@ import { NgIf } from '@angular/common';
 export class HeaderComponent {
   menuOpen = false;
 
+  constructor(public translate: TranslationService) {}
+
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
     document.body.classList.toggle('noScroll', this.menuOpen);
@@ -19,5 +22,15 @@ export class HeaderComponent {
   closeMenu(): void {
     this.menuOpen = false;
     document.body.classList.remove('noScroll');
+  }
+
+  /* ✅ Sprache setzen */
+  setLang(lang: Lang): void {
+    this.translate.setLang(lang);
+  }
+
+  /* ✅ Aktuelle Sprache abfragen (für Active-State) */
+  get currentLang(): Lang {
+    return this.translate.getLang();
   }
 }

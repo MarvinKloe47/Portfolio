@@ -1,11 +1,9 @@
 <section class="testimonials">
-
   <div class="testimonials-header">
     <h2 class="testimonials-title">
-      Need a teamplayer? Here what my colleagues said about me
+      {{ translate.t('testimonials_title') }}
     </h2>
 
-   
     <img
       class="testimonials-arrow"
       src="assets/img/arrow-teamplayer.png"
@@ -15,12 +13,17 @@
 
   <div class="testimonials-list">
     <article class="testimonial" *ngFor="let t of testimonials">
-      <h3 class="testimonial-name">{{ t.name }}</h3>
-      <p class="testimonial-project">{{ t.project }}</p>
+      <h3 class="testimonial-name">
+        {{ translate.t(t.nameKey) }}
+      </h3>
+
+      <p class="testimonial-project">
+        {{ translate.t(t.projectKey) }}
+      </p>
+
       <p class="testimonial-quote">
-        ‘’ {{ t.quote }} ’’
+        “{{ translate.t(t.quoteKey) }}”
       </p>
     </article>
   </div>
-
 </section>
