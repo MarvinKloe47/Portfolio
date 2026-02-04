@@ -1,17 +1,35 @@
 .hero { 
   position: relative;
   min-height: 70vh;  
-  padding-top: 8px;                 
-  padding-bottom: 32px;
+  padding: clamp(24px, 6vw, 40px) var(--page-pad) clamp(40px, 7vw, 72px);
   box-sizing: border-box;
-  padding-left: 40px;
-  padding-right: 40px;
   display: flex;
   align-items: flex-end;            
   justify-content: space-between;
 
   max-width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -120px -80px auto auto;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(19, 242, 255, 0.18), transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  left: -120px;
+  bottom: -160px;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(225, 85, 68, 0.16), transparent 70%);
+  pointer-events: none;
 }
 
 
@@ -21,52 +39,61 @@
   justify-content: space-between;
   align-items: flex-end;
   gap: 40px;
+  padding-left: clamp(40px, 6vw, 96px);
+  position: relative;
+  z-index: 1;
 }
 
 
 .hero-text {
-  margin-left: 60px;
-  max-width: 800px;
+  margin-left: 0;
+  max-width: 720px;
   font-family: 'Roboto Mono', monospace;
 }
 
 .hero-role {
   margin: 0 0 16px;
   color: #00F2C9;
-  font-size: 54px;
+  font-size: clamp(18px, 2.8vw, 54px);
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: clamp(0.12em, 0.6vw, 0.18em);
   text-transform: uppercase;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
 }
 
 .hero-name {
   margin: 0;
   color: #00F2C9;
-  font-size: 82px;
+  font-size: clamp(32px, 5.6vw, 82px);
   font-weight: 700;
   line-height: 1.1;
+  text-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
 }
 
 
 .hero-photo-wrapper {
   flex: 0 0 auto;
-  margin-right: 40px;
-  max-width: 520px;
+  margin-right: 0;
+  max-width: clamp(260px, 36vw, 520px);
   transform: translateY(-40px);      
+  position: relative;
+  z-index: 1;
 }
 
 .hero-photo-wrapper img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 14px;
+  box-shadow: var(--glow);
 }
 
 
 .hero-contact-vertical {
   position: absolute;
-  left: 40px;                        
+  left: var(--page-pad);                        
   top: 42%;
-  margin-left: 70px;                          
+  margin-left: 0;                          
   transform: translateY(-50%);       
   padding: 40px 10px;
 
@@ -74,13 +101,14 @@
   text-orientation: mixed;
 
   border: 1px solid #00F2C9;
-  background: transparent;
+  background: rgba(5, 3, 32, 0.5);
   color: #E15544;
   font-family: 'Roboto Mono', monospace;
   font-size: 14px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
   &:hover {
      border: 1px solid #00F2C9;
     color:  #00F2C9;
@@ -90,11 +118,12 @@
 
 .hero-arrow {
   position: absolute;
-  left: 45%;
+  left: 50%;
   top: 40%;                         
   transform: translate(-50%, -50%);
   font-size: 28px;
   color: #E15544;
+  opacity: 0.85;
 
   &:hover {
     img {
@@ -107,44 +136,18 @@
   }
 }
 
-@media (max-width: 1450px) and (min-width: 901px) {
-  .hero {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  
+@media (max-width: 1200px) and (min-width: 901px) {
   .hero-content {
-    width: auto;    
-    flex: 1 1 auto;  
-    gap: 28px;
+    gap: 24px;
+    padding-left: 0;
   }
 
-  .hero-text {
-    margin-left: 24px;   
-    max-width: 620px;
-  }
-
-  
-  .hero-role {
-    font-size: 42px;     
-  }
-
-  .hero-name {
-    font-size: 64px;    
-  }
-
-  
   .hero-photo-wrapper {
-    max-width: 420px;          
-    margin-right: 12px;        
     transform: translateY(-20px); 
   }
 
-  
   .hero-contact-vertical {
-    left: 32px;
-    margin-left: 0;            
+    display: none;
   }
 }
 
@@ -152,7 +155,7 @@
 
 @media (max-width: 900px) {
   .hero {
-    padding: 40px 20px 60px;
+    padding: 32px var(--page-pad) 56px;
     min-height: auto;
 
    
@@ -196,12 +199,12 @@
 
  
   .hero-name {
-    font-size: 44px;
+    font-size: clamp(28px, 7vw, 44px);
     line-height: 1.1;
   }
 
   .hero-role {
-    font-size: 16px;
+    font-size: clamp(12px, 3.4vw, 16px);
     margin-bottom: 12px;
     letter-spacing: 0.18em;
   }

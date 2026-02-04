@@ -1,12 +1,13 @@
 .skills {
-  padding: 80px 80px 60px;
+  padding: var(--section-pad-y) var(--page-pad) var(--section-pad-y-tight);
   font-family: 'Roboto Mono', monospace;
+  position: relative;
 }
 
 
 .skills-title {
   margin: 0 0 40px;
-  font-size: 56px;
+  font-size: clamp(32px, 4.2vw, 56px);
   font-weight: 700;
   color: #E15544;
 }
@@ -22,7 +23,8 @@
 .skills-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;             
+  gap: clamp(24px, 4vw, 60px);             
+  justify-content: center;
 }
 
 
@@ -39,11 +41,15 @@
 }
 
 .skill-icon {
-  width:  100px;
-  height: 100px;
+  width:  clamp(64px, 7vw, 100px);
+  height: clamp(64px, 7vw, 100px);
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(5, 3, 32, 0.5);
+  border: 1px solid rgba(0, 242, 201, 0.18);
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 
 .skill-icon img {
@@ -55,7 +61,7 @@
 
 .skill-name {
   color: var(--primary);
-  font-size: 16px;
+  font-size: clamp(12px, 1.2vw, 16px);
   line-height: 1.3;
   white-space: pre-line; 
 }
@@ -76,12 +82,13 @@
   .mobile-only { display: block; }
 
   .skills {
-    padding: 44px 20px 64px;
+    padding: var(--section-pad-y-tight) var(--page-pad) var(--section-pad-y);
     text-align: center;
   }
 
   .skills-title {
     margin-bottom: 22px;
+    font-size: clamp(26px, 6.5vw, 32px);
   }
 
  .skills-grid {
@@ -97,6 +104,16 @@
   gap: 18px 18px;
   align-items: center;
   justify-items: center;
+}
+
+@media (min-width: 901px) {
+  .skills-title {
+    text-align: left;
+  }
+
+  .skills-row {
+    justify-content: flex-start;
+  }
 }
 
 

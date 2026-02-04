@@ -1,6 +1,6 @@
 .imprint {
   position: relative;
-  padding: 90px 80px 120px;
+  padding: var(--section-pad-y) var(--page-pad) calc(var(--section-pad-y) + 24px);
 }
 
 .imprint-container {
@@ -11,7 +11,7 @@
 .imprint-title {
   color: #E15544;
   font-family: 'Roboto Mono', monospace;
-  font-size: 56px;
+  font-size: clamp(32px, 4.2vw, 56px);
   letter-spacing: 0.02em;
   margin: 0 0 40px;
 }
@@ -19,12 +19,12 @@
 .imprint-content {
   color: #00F2C9;
   font-family: 'Roboto Mono', monospace;
-  font-size: 12px;
+  font-size: clamp(12px, 1.1vw, 13px);
   line-height: 1.75;
 
   h2 {
     color: #E15544;
-    font-size: 14px;
+    font-size: clamp(13px, 1.2vw, 14px);
     margin: 26px 0 10px;
     letter-spacing: 0.04em;
   }
@@ -58,7 +58,7 @@
   display: none;
   position: absolute;
   top: 20px;
-  right: 70px; 
+  right: var(--page-pad); 
   background: none;
   border: none;
   color: #E15544;
@@ -68,11 +68,11 @@
 
 @media (max-width: 900px) {
   .imprint {
-    padding: 70px 18px 90px;
+    padding: var(--section-pad-y-tight) var(--page-pad) var(--section-pad-y);
   }
 
   .imprint-title {
-    font-size: 34px;
+    font-size: clamp(26px, 6.5vw, 34px);
     margin-bottom: 22px;
   }
 

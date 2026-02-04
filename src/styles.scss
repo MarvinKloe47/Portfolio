@@ -5,6 +5,9 @@
   /* Sticky header offsets */
   --header-height: 104px;
   --header-height-mobile: 98px;
+  --page-pad: clamp(20px, 5vw, 80px);
+  --section-pad-y: clamp(56px, 7vw, 96px);
+  --section-pad-y-tight: clamp(40px, 6vw, 80px);
 
   /* Main Background Colors (from your design) */
   --bg-dark: #0B042D;
@@ -28,6 +31,17 @@
 
   /* Layout */
   --max-width: 1200px;
+
+  /* Visual */
+  --glass: rgba(5, 3, 32, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -35,6 +49,15 @@ body {
   font-family: 'IBM Plex Sans', system-ui, sans-serif;
   background: var(--bg-gradient);
   color: var(--text-main);
+  overflow-x: clip;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge Legacy */
+}
+
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 body.noScroll {
@@ -44,6 +67,19 @@ body.noScroll {
 html {
   scroll-padding-top: var(--header-height);
   scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+app-root {
+  display: block;
+  overflow-x: clip;
+}
+
+section {
+  width: 100%;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+  box-sizing: border-box;
 }
 
 app-home,

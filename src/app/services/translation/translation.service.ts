@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+﻿import { Injectable } from '@angular/core';
 
 export type Lang = 'de' | 'en';
 
@@ -13,11 +13,11 @@ const TRANSLATIONS = {
     nav_contact: 'Contact',
 
     hero_role: 'FRONTEND DEVELOPER',
-    hero_name: 'Marvin Klösters',
+    hero_name: 'Marvin KlÃ¶sters',
 
     about_title: 'Why me',
     about_text:
-      "Hi, I'm Marvin Klösters — a passionate Frontend Developer focused on building modern, user-friendly web applications. With a strong foundation in HTML, CSS, and JavaScript, I create responsive, high-performance, and visually appealing interfaces that truly engage users. I place great value on clean code, clear architecture, and intuitive UI/UX, aiming to build web experiences that stand out both technically and visually.",
+      "Hi, I'm Marvin KlÃ¶sters â€” a passionate Frontend Developer focused on building modern, user-friendly web applications. With a strong foundation in HTML, CSS, and JavaScript, I create responsive, high-performance, and visually appealing interfaces that truly engage users. I place great value on clean code, clear architecture, and intuitive UI/UX, aiming to build web experiences that stand out both technically and visually.",
 
     about_iAm: 'I am',
     about_location_value_1: 'located',
@@ -27,12 +27,12 @@ const TRANSLATIONS = {
     about_remote_value_1: 'open to',
     about_remote_value_2: 'work remote',
 
-    cta_letsTalk: "Let’s talk",
+    cta_letsTalk: "Letâ€™s talk",
 
     skills_title: 'My Skills',
     skills_challenge: 'challenge',
     skills_text: 'I am always happy to learn new technologies, just tell me what you need.',
-    skills_cta: "Let’s talk",
+    skills_cta: "Letâ€™s talk",
 
     projects_title: 'My Projects',
 
@@ -49,7 +49,7 @@ const TRANSLATIONS = {
     project_pokedex_title: 'Pokedex',
     project_pokedex_stack: 'JavaScript, HTML, CSS',
     project_pokedex_desc:
-      'A responsive Pokédex web app that displays Pokémon as interactive cards with type-based colors and icons. Users can scroll through the list, search by name or ID, and switch between light and dark mode.',
+      'A responsive PokÃ©dex web app that displays PokÃ©mon as interactive cards with type-based colors and icons. Users can scroll through the list, search by name or ID, and switch between light and dark mode.',
 
     btn_github: 'GitHub',
     btn_liveTest: 'Live Test',
@@ -59,24 +59,24 @@ const TRANSLATIONS = {
     testimonial_raul_name: 'Raul C',
     testimonial_raul_project: 'Project Join',
     testimonial_raul_quote:
-      '“Marvin had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person.”',
+      'â€œMarvin had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person.â€',
 
     testimonial_stefan_name: 'Stefan Schad',
     testimonial_stefan_project: 'Project Join',
     testimonial_stefan_quote:
-      '“He is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code.”',
+      'â€œHe is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code.â€',
 
     testimonial_kadir_name: 'Kadir S',
     testimonial_kadir_project: 'Project Join',
     testimonial_kadir_quote:
-      '“He is a reliable and friendly person. Works in a structured way and writes clear code.”',
+      'â€œHe is a reliable and friendly person. Works in a structured way and writes clear code.â€',
 
     contact_title: 'Contact me',
     contact_text:
-      'Encourage people to contact you and describe what role you are interested in. Express interest in contributing to a new project.',
+      "I'm open for freelance or full-time opportunities. If you have a project in mind or need frontend support, feel free to drop a message.",
 
-    contact_email_label: 'E-mail',
-    contact_tel_label: 'Tel: 0157 123 456 68',
+    contact_email_label: 'E-mail: marvin.kloesters@gmail.com',
+    contact_tel_label: 'Tel: +49 157 123 456 68',
 
     form_name: 'Your Name',
     form_email: 'Your Email',
@@ -117,7 +117,7 @@ const TRANSLATIONS = {
 
     imprint_disclaimer_title: 'Disclaimer of warranties',
     imprint_disclaimer_text:
-      'This Portfolio is provided “as is” without warranty of any kind.',
+      'This Portfolio is provided â€œas isâ€ without warranty of any kind.',
 
     imprint_indemnity_title: 'Indemnity',
     imprint_indemnity_text:
@@ -130,7 +130,7 @@ const TRANSLATIONS = {
 
     footer_signature: '<MK>',
     footer_role: 'frontend developer',
-    footer_copyright: '© Marvin Klösters 2025',
+    footer_copyright: 'Â© Marvin KlÃ¶sters 2025',
     footer_legal: 'legal notice',
     footer_github: 'GitHub',
     footer_mail: 'Mail',
@@ -144,25 +144,25 @@ const TRANSLATIONS = {
     nav_contact: 'Kontakt',
 
     hero_role: 'FRONTEND-ENTWICKLER',
-    hero_name: 'Marvin Klösters',
+    hero_name: 'Marvin KlÃ¶sters',
 
     about_title: 'Warum ich',
     about_text:
-      'Hallo, ich bin Marvin Klösters – ein leidenschaftlicher Frontend-Entwickler mit Fokus auf moderne, benutzerfreundliche Webanwendungen.',
+      'Hallo, ich bin Marvin KlÃ¶sters â€“ ein leidenschaftlicher Frontend-Entwickler mit Fokus auf moderne, benutzerfreundliche Webanwendungen.',
 
     about_iAm: 'Ich bin',
-    about_location_value_1: 'ansässig',
+    about_location_value_1: 'ansÃ¤ssig',
     about_location_value_2: 'in Kleve',
     about_relocate_value_1: 'bereit',
     about_relocate_value_2: 'umzuziehen',
-    about_remote_value_1: 'bereit für',
+    about_remote_value_1: 'bereit fÃ¼r',
     about_remote_value_2: 'Remote-Arbeit',
 
     cta_letsTalk: 'Lass uns sprechen',
 
-    skills_title: 'Meine Fähigkeiten',
+    skills_title: 'Meine FÃ¤higkeiten',
     skills_challenge: 'Herausforderung',
-    skills_text: 'Ich freue mich immer, neue Technologien zu lernen – sag mir einfach, was du brauchst.',
+    skills_text: 'Ich freue mich immer, neue Technologien zu lernen â€“ sag mir einfach, was du brauchst.',
     skills_cta: 'Lass uns sprechen',
 
     projects_title: 'Meine Projekte',
@@ -175,39 +175,38 @@ const TRANSLATIONS = {
     project_el_title: 'EL Polo Loco',
     project_el_stack: 'Angular, TypeScript, HTML, CSS, Firebase',
     project_el_desc:
-      'Springe durch die Wüste, sammle Münzen und weiche Gegnern aus.',
+      'Springe durch die WÃ¼ste, sammle MÃ¼nzen und weiche Gegnern aus.',
 
     project_pokedex_title: 'Pokedex',
     project_pokedex_stack: 'JavaScript, HTML, CSS',
     project_pokedex_desc:
-      'Eine responsive Pokédex-Webanwendung mit interaktiven Karten.',
+      'Eine responsive PokÃ©dex-Webanwendung mit interaktiven Karten.',
 
     btn_github: 'GitHub',
     btn_liveTest: 'Live Test',
 
-    testimonials_title: 'Du suchst einen Teamplayer? Das sagen meine Kollegen über mich',
+    testimonials_title: 'Du suchst einen Teamplayer? Das sagen meine Kollegen Ã¼ber mich',
 
     testimonial_raul_name: 'Raul C',
     testimonial_raul_project: 'Projekt Join',
     testimonial_raul_quote:
-      '„Marvin arbeitet zuverlässig, strukturiert und sehr teamorientiert.“',
+      'â€žMarvin arbeitet zuverlÃ¤ssig, strukturiert und sehr teamorientiert.â€œ',
 
     testimonial_stefan_name: 'Stefan Schad',
     testimonial_stefan_project: 'Projekt Join',
     testimonial_stefan_quote:
-      '„Verlässlicher Teamplayer mit sauberem Code und Struktur.“',
+      'â€žVerlÃ¤sslicher Teamplayer mit sauberem Code und Struktur.â€œ',
 
     testimonial_kadir_name: 'Kadir S',
     testimonial_kadir_project: 'Projekt Join',
     testimonial_kadir_quote:
-      '„Strukturiert, zuverlässig und freundlich. Sehr zu empfehlen.“',
+      'â€žStrukturiert, zuverlÃ¤ssig und freundlich. Sehr zu empfehlen.â€œ',
 
-    contact_title: 'Kontaktiere mich',
-    contact_text:
-      'Ermutige Menschen, dich zu kontaktieren und an neuen Projekten mitzuwirken.',
+    contact_title: 'Kontakt',
+    contact_text: 'Ich bin offen f\u00fcr neue Projekte und spannende Teams. Wenn du Unterst\u00fctzung im Frontend brauchst, schreib mir gerne.',
 
-    contact_email_label: 'E-Mail',
-    contact_tel_label: 'Tel: 0157 123 456 68',
+    contact_email_label: 'E-Mail: marvin.kloesters@gmail.com',
+    contact_tel_label: 'Tel: +49 157 123 456 68',
 
     form_name: 'Dein Name',
     form_email: 'Deine E-Mail',
@@ -215,22 +214,22 @@ const TRANSLATIONS = {
     form_send: 'Senden',
 
     form_privacy_prefix: 'Ich habe die',
-    form_privacy_link: 'Datenschutzerklärung',
+    form_privacy_link: 'DatenschutzerklÃ¤rung',
     form_privacy_suffix: 'gelesen und stimme der Verarbeitung meiner Daten zu.',
 
     contact_error_name: 'Bitte gib deinen Namen ein.',
-    contact_error_email: 'Bitte gib eine gültige E-Mail-Adresse ein.',
+    contact_error_email: 'Bitte gib eine gÃ¼ltige E-Mail-Adresse ein.',
     contact_error_message: 'Bitte gib eine Nachricht ein (mind. 10 Zeichen).',
-    contact_error_privacy: 'Bitte akzeptiere die Datenschutzerklärung.',
+    contact_error_privacy: 'Bitte akzeptiere die DatenschutzerklÃ¤rung.',
 
     imprint_title: 'Impressum',
-    imprint_heading: 'Angaben gemäß § 5 TMG',
+    imprint_heading: 'Angaben gemÃ¤ÃŸ Â§ 5 TMG',
     imprint_project_heading: 'Projekt',
     imprint_email: 'E-Mail: marvin.kloesters[at]omexom.com',
 
     imprint_terms_title: 'Nutzungsbedingungen',
     imprint_terms_text:
-      'Durch die Nutzung dieses Portfolios erklärst du dich mit den Bedingungen einverstanden.',
+      'Durch die Nutzung dieses Portfolios erklÃ¤rst du dich mit den Bedingungen einverstanden.',
 
     imprint_scope_title: 'Geltungsbereich',
     imprint_scope_text_1:
@@ -244,24 +243,23 @@ const TRANSLATIONS = {
 
     imprint_use_title: 'Nutzung',
     imprint_use_text:
-      'Die Nutzung ist ausschließlich für legale Zwecke gestattet.',
+      'Die Nutzung ist ausschlieÃŸlich fÃ¼r legale Zwecke gestattet.',
 
     imprint_disclaimer_title: 'Haftungsausschluss',
     imprint_disclaimer_text:
-      'Dieses Portfolio wird ohne Gewähr bereitgestellt.',
+      'Dieses Portfolio wird ohne GewÃ¤hr bereitgestellt.',
 
     imprint_indemnity_title: 'Freistellung',
     imprint_indemnity_text:
-      'Du stellst die Betreiber von sämtlichen Ansprüchen frei.',
+      'Du stellst die Betreiber von sÃ¤mtlichen AnsprÃ¼chen frei.',
 
-    imprint_contact_text:
-      'Bei Fragen kontaktiere uns bitte per E-Mail.',
+    imprint_contact_text: 'Ich bin offen f\u00fcr neue Projekte und spannende Teams. Wenn du Unterst\u00fctzung im Frontend brauchst, schreib mir gerne.',
 
     imprint_date: 'Stand: 26. Juli 2025',
 
     footer_signature: '<MK>',
     footer_role: 'Frontend-Entwickler',
-    footer_copyright: '© Marvin Klösters 2025',
+    footer_copyright: 'Â© Marvin KlÃ¶sters 2025',
     footer_legal: 'Impressum',
     footer_github: 'GitHub',
     footer_mail: 'Mail',
@@ -285,3 +283,4 @@ export class TranslationService {
     return TRANSLATIONS[this.currentLang][key] ?? key;
   }
 }
+
