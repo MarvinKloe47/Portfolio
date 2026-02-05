@@ -5,7 +5,7 @@
         <h2 class="contact-title">
           {{ translate.t('contact_title') }}
         </h2>
-        <img class="contact-title-arrow" src="assets/img/arrow-contact.png" alt="" />
+       
       </div>
 
       <p class="contact-text">
@@ -97,10 +97,22 @@
     <div class="contact-submit">
       <button
         type="submit"
-        [disabled]="contactForm.invalid"
+        [disabled]="contactForm.invalid || submitStatus === 'sending'"
       >
         {{ translate.t('form_send') }}
       </button>
+    </div>
+
+    <div
+      class="contact-feedback"
+      *ngIf="submitStatus !== 'idle' && submitMessageKey"
+      [class.is-success]="submitStatus === 'success'"
+      [class.is-error]="submitStatus === 'error'"
+      [class.is-sending]="submitStatus === 'sending'"
+      [attr.role]="submitStatus === 'error' ? 'alert' : 'status'"
+      aria-live="polite"
+    >
+      {{ translate.t(submitMessageKey) }}
     </div>
   </form>
 </section>

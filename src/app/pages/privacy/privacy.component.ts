@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
+import { TranslationService } from '../../services/translation/translation.service';
 
 @Component({
   selector: 'app-privacy',
@@ -8,5 +10,9 @@ import { Component } from '@angular/core';
   styleUrl: './privacy.component.scss'
 })
 export class PrivacyComponent {
+  constructor(public translate: TranslationService, private location: Location) {}
 
+  goBack(): void {
+    this.location.back();
+  }
 }

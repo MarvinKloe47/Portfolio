@@ -210,6 +210,26 @@
   margin-top: 12px;
 }
 
+.contact-feedback {
+  grid-column: 1 / 3;
+  font-size: 12px;
+  margin-top: 6px;
+  color: var(--primary);
+  opacity: 0.9;
+}
+
+.contact-feedback.is-success {
+  color: #00F2C9;
+}
+
+.contact-feedback.is-error {
+  color: #e15544;
+}
+
+.contact-feedback.is-sending {
+  color: rgba(0, 242, 201, 0.9);
+}
+
 .contact-submit button {
   min-width: 120px;
   padding: 10px 28px;
@@ -360,6 +380,13 @@
     margin-top: 0;
   }
 
+  .contact-feedback {
+    order: 12;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+  }
+
   .contact-submit button {
     width: 140px;
     height: 44px;
@@ -383,7 +410,7 @@
     align-items: center;
     gap: 16px;
 
-    order: 12;
+    order: 13;
     margin-top: 26px;
   }
 

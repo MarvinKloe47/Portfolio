@@ -1,1 +1,62 @@
-<p>privacy works!</p>
+<section class="privacy">
+  <button class="privacy-back" type="button" (click)="goBack()" aria-label="Go back">
+    â†
+  </button>
+
+  <div class="privacy-container">
+    <h1 class="privacy-title">{{ translate.t('privacy_title') }}</h1>
+
+    <div class="privacy-content">
+      <p>{{ translate.t('privacy_intro') }}</p>
+
+      <h2>{{ translate.t('privacy_controller_title') }}</h2>
+      <p>{{ translate.t('privacy_controller_text') }}</p>
+
+      <h2>{{ translate.t('privacy_contact_title') }}</h2>
+      <p>{{ translate.t('privacy_contact_text') }}</p>
+
+      <h2>{{ translate.t('privacy_data_title') }}</h2>
+      <p>{{ translate.t('privacy_data_intro') }}</p>
+      <h3>{{ translate.t('privacy_data_form_title') }}</h3>
+      <p>{{ translate.t('privacy_data_form_text') }}</p>
+      <h3>{{ translate.t('privacy_data_logs_title') }}</h3>
+      <p>{{ translate.t('privacy_data_logs_text') }}</p>
+
+      <h2>{{ translate.t('privacy_purpose_title') }}</h2>
+      <p>{{ translate.t('privacy_purpose_text') }}</p>
+
+      <h2>{{ translate.t('privacy_legal_title') }}</h2>
+      <p>{{ translate.t('privacy_legal_text') }}</p>
+
+      <h2>{{ translate.t('privacy_recipients_title') }}</h2>
+      <p>{{ translate.t('privacy_recipients_text') }}</p>
+
+      <h2>{{ translate.t('privacy_storage_title') }}</h2>
+      <p>{{ translate.t('privacy_storage_text') }}</p>
+
+      <h2>{{ translate.t('privacy_rights_title') }}</h2>
+      <p>{{ translate.t('privacy_rights_text') }}</p>
+      <ul>
+        <li>{{ translate.t('privacy_rights_item_1') }}</li>
+        <li>{{ translate.t('privacy_rights_item_2') }}</li>
+        <li>{{ translate.t('privacy_rights_item_3') }}</li>
+        <li>{{ translate.t('privacy_rights_item_4') }}</li>
+        <li>{{ translate.t('privacy_rights_item_5') }}</li>
+        <li>{{ translate.t('privacy_rights_item_6') }}</li>
+      </ul>
+
+      <h2>{{ translate.t('privacy_withdraw_title') }}</h2>
+      <p>{{ translate.t('privacy_withdraw_text') }}</p>
+
+      <h2>{{ translate.t('privacy_security_title') }}</h2>
+      <p>{{ translate.t('privacy_security_text') }}</p>
+
+      <h2>{{ translate.t('privacy_updates_title') }}</h2>
+      <p>{{ translate.t('privacy_updates_text') }}</p>
+
+      <p class="privacy-date">
+        {{ translate.t('privacy_date') }}
+      </p>
+    </div>
+  </div>
+</section>
