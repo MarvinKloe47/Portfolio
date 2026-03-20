@@ -40,10 +40,10 @@ const TRANSLATIONS = {
     project_join_desc:
       'A social networking platform that allows users to connect, share content, and engage with a community through posts, comments, and likes.',
 
-    project_el_title: 'EL Polo Loco',
+    project_el_title: 'City Fighters',
     project_el_stack: 'Angular, TypeScript, HTML, CSS, Firebase',
     project_el_desc:
-      'Jump through the Dessert, collect coins and avoid enemies in this cartoon-style game.',
+      'Jump through the City, collect coins and avoid enemies in this cartoon-style game.',
 
     project_pokedex_title: 'Pokedex',
     project_pokedex_stack: 'JavaScript, HTML, CSS',
@@ -225,10 +225,10 @@ const TRANSLATIONS = {
     project_join_desc:
       'Eine Social-Networking-Plattform zur Vernetzung und zum Austausch von Inhalten.',
 
-    project_el_title: 'EL Polo Loco',
+    project_el_title: 'City Fighters',
     project_el_stack: 'Angular, TypeScript, HTML, CSS, Firebase',
     project_el_desc:
-      'Springe durch die Wüste, sammle Münzen und weiche Gegnern aus.',
+      'Springe durch die Stadt, sammle Münzen und weiche Gegnern aus.',
 
     project_pokedex_title: 'Pokedex',
     project_pokedex_stack: 'JavaScript, HTML, CSS',

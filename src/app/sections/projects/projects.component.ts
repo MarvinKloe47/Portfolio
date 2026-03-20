@@ -37,8 +37,8 @@ export class ProjectsComponent {
       descKey: 'project_el_desc',
       techStack: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       image: 'assets/projects/sharkie.png',
-      githubUrl: 'https://github.com/MarvinKloe47/ElPoloLoco',
-      liveUrl: 'https://marvin-kloesters.developerakademie.net/EL_POLLO_LOCO/EL_POLLO_LOCO/index.html',
+      githubUrl: 'https://github.com/MarvinKloe47/Stranger-Things',
+      liveUrl: 'https://marvin-kloesters.developerakademie.net/Stranger%20Things/index.html',
       reverse: true,
     },
     {
