@@ -33,4 +33,8 @@ export class HeaderComponent {
   get currentLang(): Lang {
     return this.translate.getLang();
   }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
