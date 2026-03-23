@@ -46,7 +46,7 @@ export class ProjectsComponent {
       descKey: 'project_pokedex_desc',
       techStack: ['JavaScript', 'HTML', 'CSS'],
       image: 'assets/projects/pollo-loco.png',
-      githubUrl: 'https://github.com/dein-user/pollo-loco',
+      githubUrl: 'https://github.com/MarvinKloe47/PokeDex',
       liveUrl: 'https://marvin-kloesters.developerakademie.net/PokeDex_Final_UltraWideFixed/index.html',
       reverse: false,
     }

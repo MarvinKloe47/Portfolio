@@ -62,15 +62,13 @@ export class ContactComponent {
         { responseType: 'text' }
       )
       .subscribe({
-        next: () => {
-          console.log('Kontaktformular: Mail gesendet');
-          this.contactForm.reset({ privacy: false });
-          this.setStatus('success', 'form_status_success');
-        },
-        error: (err) => {
-          console.error('Kontaktformular: Mail fehlgeschlagen', err);
-          this.setStatus('error', 'form_status_error');
-        }
+          next: () => {
+            this.contactForm.reset({ privacy: false });
+            this.setStatus('success', 'form_status_success');
+          },
+          error: () => {
+            this.setStatus('error', 'form_status_error');
+          }
       });
   }
 
