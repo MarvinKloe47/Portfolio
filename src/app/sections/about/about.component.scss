@@ -34,15 +34,16 @@
 
 .about-content {
   flex: 1;
-  max-width: 680px;        
+  max-width: none;        
+  width: 100%;
   
   margin-left: auto;       
   margin-right: auto;      
 
   display: flex;
   flex-direction: column;
-  align-items: center;    
-  text-align: center;      
+  align-items: flex-start;    
+  text-align: left;      
   background: var(--glass);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
@@ -55,14 +56,17 @@
 
 
 .about-title {
+  order: 0;
   margin: 0 0 24px;
   font-size: clamp(32px, 4.2vw, 56px);
   font-weight: 700;
   color: #E15544;
+  align-self: flex-end;
+  text-align: right;
 }
 
 .about-text {
-  max-width: 520px;
+  max-width: 100% !important;
   margin: 0 0 36px;
   color:  #00F2C9;
   font-size: clamp(14px, 1.2vw, 16px);
@@ -73,16 +77,17 @@
 .about-i-am {
   display: flex;
   align-items: flex-start;
-  gap: 32px;
+  gap: 22px;
   margin-bottom: 40px;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .about-i-am-label {
   font-size: clamp(24px, 3vw, 40px);
   font-weight: 700;
   color: #E15544;
+  margin-top: 12px;
 }
 
 
@@ -92,10 +97,10 @@
   max-width: 520px;
   height: 220px;
   padding: 0 24px;
-  background: rgba(5, 3, 32, 0.35);
-  border: 1px dashed rgba(0, 242, 201, 0.35);
-  border-radius: 16px;
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.25);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 
@@ -119,19 +124,19 @@
 
 
 .about-tag--location {
-  top: 0;
+  top: 6px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .about-tag--relocate {
-  top: 40px;
-  right: 24px;
+  top: 70px;
+  right: 8px;
 }
 
 .about-tag--remote {
-  bottom: 8px;
-  left: 120px;
+  bottom: 10px;
+  left: 40px;
 }
 
 
@@ -143,24 +148,24 @@
 .about-arrow--1 {
   width: 34px;
   height: auto;
-  top: 48px;
-  left: 40px;
+  top: 54px;
+  left: 18px;
 }
 
 
 .about-arrow--2 {
   width: 40px;
   height: auto;
-  top: 88px;
-  right: 44px;
+  top: 102px;
+  right: 24px;
 }
 
 
 .about-arrow--3 {
   width: 46px;
   height: auto;
-  bottom: 0;
-  right: 12px;
+  bottom: -4px;
+  right: -6px;
 }
 .about-cta {
   margin-top: 16px;             
@@ -237,7 +242,7 @@
 
   .about-i-am {
     align-items: center;
-    gap: 28px;
+    gap: 22px;
     justify-content: flex-start;
   }
 
@@ -248,34 +253,34 @@
   }
 
   .about-tag--location {
-    top: 0;
+    top: 8px;
     left: 50%;
     transform: translateX(-50%);
   }
 
   .about-tag--relocate {
-    top: 52px;
-    right: 28px;
+    top: 86px;
+    right: 12px;
   }
 
   .about-tag--remote {
-    bottom: 10px;
-    left: 140px;
+    bottom: 14px;
+    left: 44px;
   }
 
   .about-arrow--1 {
-    top: 58px;
-    left: 58px;
+    top: 66px;
+    left: 24px;
   }
 
   .about-arrow--2 {
-    top: 104px;
-    right: 52px;
+    top: 118px;
+    right: 30px;
   }
 
   .about-arrow--3 {
-    bottom: 6px;
-    right: 16px;
+    bottom: -2px;
+    right: -8px;
   }
 }
 
