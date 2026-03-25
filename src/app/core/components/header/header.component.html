@@ -1,52 +1,54 @@
 <header class="header">
-  <div class="logo">
-    <button class="logo-btn" (click)="scrollToTop()" aria-label="Zum Seitenanfang">
-      <img class="Logo" src="assets/img/Logo.png" alt="Logo" />
-    </button>
-  </div>
-
-  
-  <nav class="nav">
-    <a href="#about">{{ translate.t('nav_whyMe') }}</a>
-    <a href="#skills">{{ translate.t('nav_skills') }}</a>
-    <a href="#projects">{{ translate.t('nav_projects') }}</a>
-    <a href="#contact">{{ translate.t('nav_contact') }}</a>
-  </nav>
-
-  <div class="header-right">
-    
-    <div class="lang">
-      <button
-        type="button"
-        (click)="setLang('de')"
-        [class.active]="currentLang === 'de'"
-      >
-        DE
-      </button>
-      <span>|</span>
-      <button
-        type="button"
-        (click)="setLang('en')"
-        [class.active]="currentLang === 'en'"
-      >
-        EN
+  <div class="header-inner">
+    <div class="logo">
+      <button class="logo-btn" (click)="scrollToTop()" aria-label="Zum Seitenanfang">
+        <img class="Logo" src="assets/img/Logo.png" alt="Logo" />
       </button>
     </div>
 
     
-    <button
-      class="burger"
-      type="button"
-      (click)="toggleMenu()"
-      [attr.aria-expanded]="menuOpen"
-      aria-label="Toggle menu"
-    >
-      <span class="burgerLines" *ngIf="!menuOpen">
-        <i></i><i></i><i></i>
-      </span>
+    <nav class="nav">
+      <a href="#about">{{ translate.t('nav_whyMe') }}</a>
+      <a href="#skills">{{ translate.t('nav_skills') }}</a>
+      <a href="#projects">{{ translate.t('nav_projects') }}</a>
+      <a href="#contact">{{ translate.t('nav_contact') }}</a>
+    </nav>
 
-      <span class="closeIcon" *ngIf="menuOpen">×</span>
-    </button>
+    <div class="header-right">
+      
+      <div class="lang">
+        <button
+          type="button"
+          (click)="setLang('de')"
+          [class.active]="currentLang === 'de'"
+        >
+          DE
+        </button>
+        <span>|</span>
+        <button
+          type="button"
+          (click)="setLang('en')"
+          [class.active]="currentLang === 'en'"
+        >
+          EN
+        </button>
+      </div>
+
+      
+      <button
+        class="burger"
+        type="button"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen"
+        aria-label="Toggle menu"
+      >
+        <span class="burgerLines" *ngIf="!menuOpen">
+          <i></i><i></i><i></i>
+        </span>
+
+        <span class="closeIcon" *ngIf="menuOpen">×</span>
+      </button>
+    </div>
   </div>
 </header>
 

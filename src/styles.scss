@@ -93,7 +93,13 @@ section[id] {
   scroll-margin-top: var(--header-height);
 }
 
-
+@media (min-width: 1920px) {
+  section {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 main {
   max-width: var(--max-width);      /* z. B. 1200px */
   margin: 0 auto;
