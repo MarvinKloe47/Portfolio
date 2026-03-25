@@ -138,7 +138,7 @@
 
 .about-tag--remote {
   bottom: 10px;
-  right: 180px !important;
+  right: 180px;
 }
 
 
@@ -151,15 +151,15 @@
   width: 34px;
   height: auto;
   top: 54px;
-  left: 156px !important;
+  left: 156px;
 }
 
 
 .about-arrow--2 {
   width: 40px;
   height: auto;
-  top: 160px !important;
-  right: 120px !important;
+  top: 160px;
+  right: 120px;
 }
 
 
@@ -203,6 +203,15 @@
 
   .about-content {
     max-width: 720px;
+  }
+
+  .about-i-am {
+    justify-content: center;
+  }
+
+  .about-i-am-label {
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .about-cta {
@@ -266,19 +275,18 @@
   }
 
   .about-tag--remote {
-    bottom: 14px;
-    left: auto;
-    right: -40px;
+    bottom: 10px;
+    right: 180px;
   }
 
   .about-arrow--1 {
-    top: 66px;
-    left: 24px;
+    top: 54px;
+    left: 156px;
   }
 
   .about-arrow--2 {
-    top: 118px;
-    right: 30px;
+    top: 160px;
+    right: 120px;
   }
 
   .about-arrow--3 {
@@ -332,6 +340,8 @@
 
   .about-i-am-label {
     font-size: clamp(20px, 6vw, 28px);
+    margin-top: 0;
+    margin-left: 0;
   }
 
  
