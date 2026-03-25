@@ -4,7 +4,7 @@
  
   <div class="skills-rows desktop-only">
     <div class="skills-row">
-      <div class="skill" *ngFor="let skill of skillsTop">
+      <div class="skill" *ngFor="let skill of skillsTop" [attr.data-skill]="skill.name">
         <div class="skill-icon">
           <img [src]="skill.icon" [alt]="skill.name" />
         </div>
@@ -12,7 +12,7 @@
     </div>
 
     <div class="skills-row">
-      <div class="skill" *ngFor="let skill of skillsBottom">
+      <div class="skill" *ngFor="let skill of skillsBottom" [attr.data-skill]="skill.name">
         <div class="skill-icon">
           <img [src]="skill.icon" [alt]="skill.name" />
         </div>

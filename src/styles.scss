@@ -1,38 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap');
 
 :root {
-  /* Sticky header offsets */
   --header-height: 104px;
   --header-height-mobile: 98px;
   --page-pad: clamp(20px, 5vw, 80px);
   --section-pad-y: clamp(56px, 7vw, 96px);
   --section-pad-y-tight: clamp(40px, 6vw, 80px);
 
-  /* Main Background Colors (from your design) */
   --bg-dark: #0B042D;
   --bg-darker: #050320;
   --bg-dark-20: rgba(11, 4, 45, 0.2);
 
-  /* Gradient */
   --bg-gradient: radial-gradient(
     circle at 20% 20%,
     var(--bg-dark),
     var(--bg-darker) 70%
   );
 
-  /* Accent colors */
   --primary: #13f2ff;
   --accent: #ff5b2e;
 
-  /* Text */
   --text-main: #ffffff;
   --text-muted: #9aa0ff;
 
-  /* Layout */
   --max-width: 1200px;
 
-  /* Visual */
   --glass: rgba(5, 3, 32, 0.55);
   --glass-border: rgba(255, 255, 255, 0.08);
   --glow: 0 18px 40px rgba(0, 0, 0, 0.35);
@@ -50,8 +42,8 @@ body {
   background: linear-gradient(135deg, #050320 0%, #0B042D 22%, #1F0B80 45%, #0B042F 70%, #241085 100%);
   color: var(--text-main);
   overflow-x: clip;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge Legacy */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 body::-webkit-scrollbar,
@@ -102,9 +94,9 @@ section[id] {
   }
 }
 main {
-  max-width: var(--max-width);      /* z. B. 1200px */
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 40px 80px;             /* LINKS/RECHTS Rand + unten Abstand */
+  padding: 0 40px 80px;
   box-sizing: border-box;
 }
 

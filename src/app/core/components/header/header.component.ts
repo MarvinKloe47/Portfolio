@@ -24,12 +24,10 @@ export class HeaderComponent {
     document.body.classList.remove('noScroll');
   }
 
-  /* ✅ Sprache setzen */
   setLang(lang: Lang): void {
     this.translate.setLang(lang);
   }
 
-  /* ✅ Aktuelle Sprache abfragen (für Active-State) */
   get currentLang(): Lang {
     return this.translate.getLang();
   }

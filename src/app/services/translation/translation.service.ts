@@ -421,7 +421,6 @@ export class TranslationService {
     try {
       window.localStorage.setItem(this.storageKey, lang);
     } catch {
-      // ignore storage errors (e.g. blocked in privacy mode)
     }
   }
 }
