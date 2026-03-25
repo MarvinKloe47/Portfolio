@@ -59,6 +59,7 @@
   letter-spacing: clamp(0.12em, 0.6vw, 0.18em);
   text-transform: uppercase;
   text-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
 }
 
 .hero-name {
@@ -68,6 +69,7 @@
   font-weight: 700;
   line-height: 1.1;
   text-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
 }
 
 
@@ -92,7 +94,7 @@
 .hero-contact-vertical {
   position: absolute;
   left: var(--page-pad);                        
-  top: 42%;
+  top: 18%;
   margin-left: 0;                          
   transform: translateY(-50%);       
   z-index: 2;
@@ -120,12 +122,13 @@
 .hero-arrow {
   position: absolute;
   left: 50%;
-  top: 40%;                         
+  top: 30%;                         
   transform: translate(-50%, -50%);
   z-index: 2;
   font-size: 28px;
   color: #E15544;
   opacity: 0.85;
+  margin-left: -24px;
 
   &:hover {
     img {
@@ -211,12 +214,14 @@
   .hero-name {
     font-size: clamp(28px, 7vw, 44px);
     line-height: 1.1;
+    white-space: normal;
   }
 
   .hero-role {
     font-size: clamp(12px, 3.4vw, 16px);
     margin-bottom: 12px;
     letter-spacing: 0.18em;
+    white-space: normal;
   }
 
   

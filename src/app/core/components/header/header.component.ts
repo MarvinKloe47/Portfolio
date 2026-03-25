@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgIf } from '@angular/common'; 
+import { Router } from '@angular/router';
 import { TranslationService, Lang } from '../../../services/translation/translation.service';
 
 @Component({
@@ -12,7 +13,10 @@ import { TranslationService, Lang } from '../../../services/translation/translat
 export class HeaderComponent {
   menuOpen = false;
 
-  constructor(public translate: TranslationService) {}
+  constructor(
+    public translate: TranslationService,
+    private router: Router
+  ) {}
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
@@ -33,6 +37,13 @@ export class HeaderComponent {
   }
 
   scrollToTop(): void {
+    if (this.router.url !== '/') {
+      this.router.navigateByUrl('/').then(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      return;
+    }
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
