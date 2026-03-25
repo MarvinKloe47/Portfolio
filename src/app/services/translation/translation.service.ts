@@ -17,7 +17,7 @@ const TRANSLATIONS = {
 
     about_title: 'Why me',
     about_text:
-      "Hi, I'm Marvin Klösters” a passionate Frontend Developer focused on building modern, user-friendly web applications. With a strong foundation in HTML, CSS, and JavaScript, I create responsive, high-performance, and visually appealing interfaces that truly engage users. I place great value on clean code, clear architecture, and intuitive UI/UX, aiming to build web experiences that stand out both technically and visually.",
+      "Hi, I'm Marvin Klösters, a frontend developer from Kleve. I turn designs into clean, fast interfaces with HTML, CSS, and JavaScript and focus on structure, maintainable code, and the small details that make a UI feel right.",
     about_iAm: 'I am',
     about_location_value_1: 'located',
     about_location_value_2: 'in Kleve',
@@ -30,7 +30,7 @@ const TRANSLATIONS = {
 
     skills_title: 'My Skills',
     skills_challenge: 'challenge',
-    skills_text: 'I am always happy to learn new technologies, just tell me what you need.',
+    skills_text: 'I enjoy learning new tech. Tell me what you need and I will dive in.',
     skills_cta: "Let's talk",
 
     projects_title: 'My Projects',
@@ -53,7 +53,7 @@ const TRANSLATIONS = {
     btn_github: 'GitHub',
     btn_liveTest: 'Live Test',
 
-    testimonials_title: 'Need a teamplayer? Here what my colleagues said about me',
+    testimonials_title: 'What teammates say about me',
 
     testimonial_raul_name: 'Raul C',
     testimonial_raul_project: 'Project Join',
@@ -72,7 +72,7 @@ const TRANSLATIONS = {
 
     contact_title: 'Contact me',
     contact_text:
-      "I'm open for freelance or full-time opportunities. If you have a project in mind or need frontend support, feel free to drop a message.",
+      'Open to freelance or full-time roles. If you have a project or need frontend support, just reach out.',
 
     contact_email_label: 'E-mail: marvin.kloesters@gmail.com',
     contact_tel_label: 'Tel: +49 157 123 456 68',
@@ -215,7 +215,7 @@ const TRANSLATIONS = {
 
     skills_title: 'Meine Fähigkeiten',
     skills_challenge: 'Herausforderung',
-    skills_text: 'Ich freue mich immer, neue Technologien zu lernen â€“ sag mir einfach, was du brauchst.',
+    skills_text: 'Ich lerne gern neue Technologien – sag mir einfach, was du brauchst.',
     skills_cta: 'Lass uns sprechen',
 
     projects_title: 'Meine Projekte',
@@ -267,17 +267,17 @@ const TRANSLATIONS = {
     form_send: 'Senden',
 
     form_privacy_prefix: 'Ich habe die',
-    form_privacy_link: 'DatenschutzerklÃ¤rung',
+    form_privacy_link: 'Datenschutzerklärung',
     form_privacy_suffix: 'gelesen und stimme der Verarbeitung meiner Daten zu.',
     form_status_sending: 'Nachricht wird gesendet...',
     form_status_success: 'Danke! Deine Nachricht wurde gesendet.',
     form_status_error: 'Sorry, es ist ein Fehler aufgetreten. Bitte erneut versuchen.',
-    form_status_invalid: 'Bitte pruefe deine Eingaben und akzeptiere die Datenschutzerklaerung.',
+    form_status_invalid: 'Bitte prüfe deine Eingaben und akzeptiere die Datenschutzerklärung.',
 
     contact_error_name: 'Bitte gib deinen Namen ein.',
-    contact_error_email: 'Bitte gib eine gÃ¼ltige E-Mail-Adresse ein.',
+    contact_error_email: 'Bitte gib eine gültige E-Mail-Adresse ein.',
     contact_error_message: 'Bitte gib eine Nachricht ein (mind. 10 Zeichen).',
-    contact_error_privacy: 'Bitte akzeptiere die DatenschutzerklÃ¤rung.',
+    contact_error_privacy: 'Bitte akzeptiere die Datenschutzerklärung.',
 
     imprint_title: 'Impressum',
     imprint_heading: 'Angaben gemäß § 5 TMG',
@@ -316,7 +316,7 @@ const TRANSLATIONS = {
 
     privacy_title: 'Datenschutz',
     privacy_intro:
-      'Diese Datenschutzerklaerung erklaert, wie wir deine personenbezogenen Daten verarbeiten, wenn du diese Portfolio-Website nutzt.',
+      'Diese Datenschutzerklärung erklärt, wie wir deine personenbezogenen Daten verarbeiten, wenn du diese Portfolio-Website nutzt.',
     privacy_controller_title: 'Verantwortliche Stelle',
     privacy_controller_text:
       'Verantwortlich fuer die Datenverarbeitung ist Marvin Kloesters, Horlemannplatz 1, 47589 Uedem, Deutschland.',
