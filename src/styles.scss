@@ -47,7 +47,7 @@
 body {
   margin: 0;
   font-family: 'IBM Plex Sans', system-ui, sans-serif;
-  background: var(--bg-gradient);
+  background: linear-gradient(135deg, #050320 0%, #0B042D 22%, #1F0B80 45%, #0B042F 70%, #241085 100%);
   color: var(--text-main);
   overflow-x: clip;
   scrollbar-width: none; /* Firefox */
@@ -92,6 +92,7 @@ app-privacy {
 section[id] {
   scroll-margin-top: var(--header-height);
 }
+
 
 @media (min-width: 1920px) {
   section {
