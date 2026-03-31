@@ -33,7 +33,11 @@
 body {
   margin: 0;
   font-family: 'IBM Plex Sans', system-ui, sans-serif;
-  background: linear-gradient(135deg, #050320 0%, #0B042D 22%, #1F0B80 45%, #0B042F 70%, #241085 100%);
+  background:
+    radial-gradient(1200px 800px at 18% -12%, rgba(78, 40, 170, 0.75), transparent 58%),
+    radial-gradient(1000px 700px at 82% 18%, rgba(58, 28, 150, 0.65), transparent 60%),
+    radial-gradient(800px 900px at 50% 88%, rgba(44, 20, 120, 0.6), transparent 62%),
+    linear-gradient(180deg, #050320 0%, #0A0430 55%, #070320 100%);
   color: var(--text-main);
   overflow-x: clip;
   scrollbar-width: none;
@@ -76,7 +80,7 @@ app-privacy {
 }
 
 section[id] {
-  scroll-margin-top: var(--header-height);
+  scroll-margin-top: calc(var(--header-height) + 24px);
 }
 
 
@@ -106,7 +110,7 @@ main {
   }
 
   section[id] {
-    scroll-margin-top: var(--header-height-mobile);
+    scroll-margin-top: calc(var(--header-height-mobile) + 20px);
   }
 }
 

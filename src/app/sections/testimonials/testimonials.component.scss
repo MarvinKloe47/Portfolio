@@ -12,7 +12,7 @@
 
 .testimonials-title {
   margin: 0;
-  font-size: clamp(20px, 2.2vw, 28px);
+  font-size: clamp(18px, 2vw, 24px);
   font-weight: 700;
   color: #e15544;
   
@@ -52,11 +52,11 @@
 .testimonial {
   flex: 1;
   max-width: 320px;
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  border-radius: 14px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
   padding: 22px 18px;
-  box-shadow: var(--glow);
+  box-shadow: none;
 }
 
 .testimonial-name {
@@ -68,7 +68,7 @@
 
 .testimonial-project {
   margin: 0 0 16px;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--primary);
 }
 
@@ -183,8 +183,8 @@
     min-height: 220px;
 
     padding: 22px 18px;
-    border: 1px solid #00F2C9;
-    background: rgba(5, 3, 32, 0.35);
+    border: none;
+    background: transparent;
 
     scroll-snap-align: start; 
     scroll-snap-stop: always;

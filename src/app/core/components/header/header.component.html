@@ -8,10 +8,18 @@
 
     
     <nav class="nav">
-      <a href="#about">{{ translate.t('nav_whyMe') }}</a>
-      <a href="#skills">{{ translate.t('nav_skills') }}</a>
-      <a href="#projects">{{ translate.t('nav_projects') }}</a>
-      <a href="#contact">{{ translate.t('nav_contact') }}</a>
+      <button class="nav-link" type="button" (click)="scrollToSection('about')">
+        {{ translate.t('nav_whyMe') }}
+      </button>
+      <button class="nav-link" type="button" (click)="scrollToSection('skills')">
+        {{ translate.t('nav_skills') }}
+      </button>
+      <button class="nav-link" type="button" (click)="scrollToSection('projects')">
+        {{ translate.t('nav_projects') }}
+      </button>
+      <button class="nav-link" type="button" (click)="scrollToSection('contact')">
+        {{ translate.t('nav_contact') }}
+      </button>
     </nav>
 
     <div class="header-right">
@@ -56,18 +64,18 @@
 <div class="mobileOverlay" *ngIf="menuOpen" (click)="closeMenu()">
   <div class="mobilePanel" (click)="$event.stopPropagation()">
     <nav class="mobileNav">
-      <a href="#about" (click)="closeMenu()">
+      <button class="mobile-link" type="button" (click)="scrollToSection('about')">
         {{ translate.t('nav_whyMe') }}
-      </a>
-      <a href="#skills" (click)="closeMenu()">
+      </button>
+      <button class="mobile-link" type="button" (click)="scrollToSection('skills')">
         {{ translate.t('nav_skills') }}
-      </a>
-      <a href="#projects" (click)="closeMenu()">
+      </button>
+      <button class="mobile-link" type="button" (click)="scrollToSection('projects')">
         {{ translate.t('nav_projects') }}
-      </a>
-      <a href="#contact" (click)="closeMenu()">
+      </button>
+      <button class="mobile-link" type="button" (click)="scrollToSection('contact')">
         {{ translate.t('nav_contact') }}
-      </a>
+      </button>
     </nav>
 
     

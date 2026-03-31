@@ -7,8 +7,8 @@
   cursor: pointer;
 }
 .Logo {
-  height: 94px;
-  width: 175px;
+  height: 48px;
+  width: auto;
 }
 
 .header {
@@ -17,15 +17,14 @@
   top: 0;
   z-index: 1000;
 
-  height: 80px;
-  padding: 24px var(--page-pad) 0;
+  height: 64px;
+  padding: 10px var(--page-pad);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(5, 3, 32, 0.9);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  background: #050320;
+  border-bottom: none;
+  box-shadow: none;
   box-sizing: border-box;
 }
 
@@ -44,19 +43,22 @@
 .nav {
   display: flex;
   justify-content: center;
-  gap: 64px;
-  margin-left: 64px;
+  gap: 40px;
+  margin-left: 48px;
+}
 
-  a {
-    text-decoration: none;
-    color: #E15544;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 120%;
+.nav-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #E15544;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  cursor: pointer;
 
-    &:hover {
-      color: #02F4BF;
-    }
+  &:hover {
+    color: #02F4BF;
   }
 }
 
@@ -150,15 +152,18 @@
   flex-direction: column;
   align-items: center;
   gap: 44px;
+}
 
-  a {
-    color: #E15544;
-    font-size: 22px;
-    text-decoration: none;
+.mobile-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #E15544;
+  font-size: 22px;
+  cursor: pointer;
 
-    &:hover {
-      color: #02F4BF;
-    }
+  &:hover {
+    color: #02F4BF;
   }
 }
 
@@ -188,7 +193,7 @@
 
 @media (max-width: 900px) {
   .header {
-    padding: 18px var(--page-pad) 0; 
+    padding: 10px var(--page-pad); 
   }
 
   .nav {

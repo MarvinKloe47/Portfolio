@@ -46,4 +46,24 @@ export class HeaderComponent {
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  scrollToSection(sectionId: string): void {
+    const doScroll = () => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    this.closeMenu();
+
+    if (this.router.url !== '/') {
+      this.router.navigateByUrl('/').then(() => {
+        setTimeout(doScroll, 0);
+      });
+      return;
+    }
+
+    doScroll();
+  }
 }

@@ -26,8 +26,8 @@
   max-height: clamp(420px, 52vw, 640px);
   object-fit: cover;
   object-position: center top;
-  border-radius: 8px;
-  box-shadow: var(--glow);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 
@@ -67,7 +67,7 @@
   max-width: 100% !important;
   margin: 0 0 36px;
   color:  #00F2C9;
-  font-size: clamp(14px, 1.2vw, 16px);
+  font-size: clamp(14px, 1.15vw, 16px);
   line-height: 1.6;
 }
 
@@ -75,7 +75,7 @@
 .about-i-am {
   display: flex;
   align-items: flex-start;
-  gap: 22px;
+  gap: 28px;
   margin-bottom: 40px;
   width: 100%;
   justify-content: flex-start;
@@ -87,8 +87,8 @@
   font-weight: 700;
   font-style: normal;
   color: #E15544;
-  margin-top: -140px;
-  margin-left: 56px;
+  margin-top: -120px;
+  margin-left: 40px;
 }
 
 
@@ -97,7 +97,7 @@
   width: 100%;
   max-width: 520px;
   height: 220px;
-  padding: 0 24px;
+  padding: 0 16px;
   background: transparent;
   border: none;
   border-radius: 0;
@@ -111,7 +111,7 @@
   align-items: center;
   gap: 10px;
   color:  #00F2C9;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
   font-style: normal;
@@ -120,25 +120,25 @@
 }
 
 .about-icon img {
-  width: 35px;
-  height: 42px;
+  width: 30px;
+  height: 36px;
 }
 
 
 .about-tag--location {
-  top: 6px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .about-tag--relocate {
-  top: 70px;
-  right: 8px;
+  top: 78px;
+  right: 16px;
 }
 
 .about-tag--remote {
-  bottom: 10px;
-  right: 180px;
+  bottom: 14px;
+  right: 160px;
 }
 
 
@@ -150,24 +150,24 @@
 .about-arrow--1 {
   width: 34px;
   height: auto;
-  top: 54px;
-  left: 156px;
+  top: 60px;
+  left: 150px;
 }
 
 
 .about-arrow--2 {
   width: 40px;
   height: auto;
-  top: 160px;
-  right: 120px;
+  top: 150px;
+  right: 114px;
 }
 
 
 .about-arrow--3 {
   width: 46px;
   height: auto;
-  bottom: -4px;
-  right: -6px;
+  bottom: -6px;
+  right: -10px;
 }
 .about-cta {
   margin-top: 16px;             
@@ -181,11 +181,10 @@
   font-weight: 500;
   
   align-self: flex-end;
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+  box-shadow: none;
 
   &:hover {
     cursor: pointer;
-    filter: brightness(1.1);
     color: #E15544;
   }
 }
@@ -253,45 +252,45 @@
 
   .about-i-am {
     align-items: center;
-    gap: 22px;
+    gap: 28px;
     justify-content: flex-start;
   }
 
   .about-visual {
     max-width: 560px;
     height: 240px;
-    padding: 0 32px;
+    padding: 0 20px;
   }
 
   .about-tag--location {
-    top: 8px;
+    top: 12px;
     left: 50%;
     transform: translateX(-50%);
   }
 
   .about-tag--relocate {
-    top: 86px;
-    right: 12px;
+    top: 92px;
+    right: 18px;
   }
 
   .about-tag--remote {
-    bottom: 10px;
-    right: 180px;
+    bottom: 14px;
+    right: 160px;
   }
 
   .about-arrow--1 {
-    top: 54px;
-    left: 156px;
+    top: 60px;
+    left: 150px;
   }
 
   .about-arrow--2 {
-    top: 160px;
-    right: 120px;
+    top: 150px;
+    right: 114px;
   }
 
   .about-arrow--3 {
-    bottom: -2px;
-    right: -8px;
+    bottom: -6px;
+    right: -10px;
   }
 }
 
