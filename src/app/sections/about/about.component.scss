@@ -20,11 +20,11 @@
 }
 
 .about-photo img {
-  width: 100%;
+  width: auto;
   max-width: 440px;
-  height: 100%;
-  max-height: clamp(420px, 52vw, 640px);
-  object-fit: cover;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
   object-position: center top;
   border-radius: 0;
   box-shadow: none;

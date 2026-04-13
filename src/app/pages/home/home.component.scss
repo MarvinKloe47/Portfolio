@@ -42,7 +42,8 @@
 }
 
 .nav {
-  font: roboto mono, medium;
+  font-family: var(--font-main);
+  font-weight: 500;
   display: flex;
   justify-content: center;
   gap: 40px;
