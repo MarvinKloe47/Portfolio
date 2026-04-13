@@ -4,7 +4,7 @@
   padding: clamp(24px, 6vw, 40px) var(--page-pad) clamp(20px, 5vw, 48px);
   box-sizing: border-box;
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: space-between;
 
   width: 100%;
@@ -15,11 +15,11 @@
 
 .hero-content {
   width: 100%;
-  display: flex end;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 56px;
-  padding-top: clamp(12px, 4vw, 80px);
+  padding-top: clamp(120px, 16vw, 280px);
   position: relative;
   z-index: 1;
   padding-bottom: 0px;
