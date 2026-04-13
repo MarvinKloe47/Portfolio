@@ -16,17 +16,27 @@ export class HeroComponent {
 
 
   scrollToContact() {
-  const element = document.getElementById("contact");
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth" });
+    this.scrollElementIntoHeaderView('contact');
   }
-}
 
-scrollToAbout() {
-  const element = document.getElementById("about");
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth" });
+  scrollToAbout() {
+    this.scrollElementIntoHeaderView('about');
   }
-}
+
+  private scrollElementIntoHeaderView(elementId: string): void {
+    const element = document.getElementById(elementId);
+    if (!element) {
+      return;
+    }
+
+    const header = document.querySelector('.header') as HTMLElement | null;
+    const headerHeight = header?.offsetHeight ?? 0;
+    const targetTop = element.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+    window.scrollTo({
+      top: Math.max(targetTop, 0),
+      behavior: 'smooth'
+    });
+  }
 
 }

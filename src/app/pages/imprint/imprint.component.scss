@@ -10,7 +10,7 @@
 
 .imprint-title {
   color: #E15544;
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-main);
   font-size: clamp(32px, 4.2vw, 56px);
   letter-spacing: 0.02em;
   margin: 0 0 40px;
@@ -18,7 +18,7 @@
 
 .imprint-content {
   color: #00F2C9;
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-main);
   font-size: clamp(12px, 1.1vw, 13px);
   line-height: 1.75;
 

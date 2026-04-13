@@ -49,21 +49,34 @@ export class HeaderComponent {
 
   scrollToSection(sectionId: string): void {
     const doScroll = () => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      this.scrollElementIntoHeaderView(sectionId);
     };
 
     this.closeMenu();
 
     if (this.router.url !== '/') {
       this.router.navigateByUrl('/').then(() => {
-        setTimeout(doScroll, 0);
+        setTimeout(doScroll, 50);
       });
       return;
     }
 
     doScroll();
+  }
+
+  private scrollElementIntoHeaderView(elementId: string): void {
+    const element = document.getElementById(elementId);
+    if (!element) {
+      return;
+    }
+
+    const header = document.querySelector('.header') as HTMLElement | null;
+    const headerHeight = header?.offsetHeight ?? 0;
+    const targetTop = element.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+    window.scrollTo({
+      top: Math.max(targetTop, 0),
+      behavior: 'smooth'
+    });
   }
 }

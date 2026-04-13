@@ -1,24 +1,21 @@
 .contact {
   padding: var(--section-pad-y) var(--page-pad) calc(var(--section-pad-y) + 20px);
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-main);
 }
 
 .contact-arrowBtn {
-  position: absolute;
-  right: 0;
-  top: 10px;
+  position: relative;
 
   background: transparent;
   border: none;
   padding: 0;
 
   cursor: pointer;
-  display: inline-flex;
   align-items: center;
   justify-content: center;
 
   width: 28px;
-  height: 28px;
+  height: auto;
 }
 
 .contact-arrow {
@@ -37,11 +34,10 @@
 .contact-top {
   position: relative;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 32px 64px;
+  grid-template-columns: 0.85fr 1fr 0.01fr;
+  gap: 32px 20px;
   align-items: start;
   margin-bottom: 28px;
-  padding-right: 40px;
 }
 
 .contact-copy {
@@ -77,17 +73,27 @@
 }
 
 .contact-info {
-  display: flex;
+  display: flex-start;
   flex-direction: column;
   gap: 14px;
   color: var(--primary);
   font-size: 14px;
+  width: 100%;
+}
+
+.contact-connect {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .contact-info-row {
   display: flex;
   align-items: center;
   gap: 12px;
+  width: 100%;
 }
 
 .contact-info-icon {
@@ -95,8 +101,8 @@
   width: 22px;
   height: 22px;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 
   svg {
     width: 100%;
@@ -138,7 +144,7 @@
   border: 1px solid rgba(0, 242, 201, 0.65);
   background: transparent;
   color: var(--primary);
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-main);
   font-size: 14px;
   outline: none;
   transition: border-color 160ms ease;
@@ -230,7 +236,7 @@
   border: 1px solid rgba(0, 242, 201, 0.85);
   background: transparent;
   color: #e15544;
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-main);
   font-size: clamp(13px, 1.1vw, 14px);
   cursor: pointer;
   box-shadow: none;
@@ -247,7 +253,7 @@
 
 @media (max-width: 1200px) {
   .contact-top {
-    grid-template-columns: 1fr;
+    grid-template-columns: 0.85fr 1fr 0.2fr;
     padding-right: 0;
   }
 
@@ -311,7 +317,7 @@
     margin: 0 0 24px;
   }
 
- 
+
   .contact-form {
     display: flex;
     flex-direction: column;
@@ -331,10 +337,18 @@
     box-sizing: border-box;
   }
 
-  
-  .contact-field--name { order: 1; }
-  .contact-field--email { order: 2; }
-  .contact-field--message { order: 3; }
+
+  .contact-field--name {
+    order: 1;
+  }
+
+  .contact-field--email {
+    order: 2;
+  }
+
+  .contact-field--message {
+    order: 3;
+  }
 
 
   .contact-field--message textarea {
@@ -364,7 +378,7 @@
     accent-color: #E15544;
   }
 
- 
+
   .contact-submit {
     order: 11;
     width: 100%;
@@ -396,7 +410,7 @@
     cursor: not-allowed;
   }
 
-  
+
   .contact-info {
     display: flex;
     flex-direction: column;
@@ -430,5 +444,3 @@
     height: auto;
   }
 }
-
-

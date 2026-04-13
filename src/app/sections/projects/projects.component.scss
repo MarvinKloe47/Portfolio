@@ -1,6 +1,6 @@
 .projects {
   padding: var(--section-pad-y) var(--page-pad);
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-main);
 }
 
 
@@ -48,7 +48,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
 }
 
 .project-title {
@@ -78,6 +78,7 @@
 }
 
 @media (max-width: 1024px) {
+
   .project,
   .project--reverse {
     flex-direction: column;
@@ -86,7 +87,7 @@
 
 @media (min-width: 901px) {
   .projects-title {
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -101,7 +102,7 @@
   align-items: center;
   justify-content: center;
   padding: 10px 28px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-main);
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;

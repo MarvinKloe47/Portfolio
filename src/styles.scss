@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap');
 
 :root {
+  --font-main: 'Roboto Mono', monospace;
   --header-height: 104px;
   --header-height-mobile: 98px;
   --page-pad: clamp(20px, 5vw, 80px);
@@ -30,14 +31,33 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
-  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  min-height: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+html {
+  background: #0B042D;
+}
+
+body {
+  font-family: var(--font-main);
   background:
-    radial-gradient(1200px 800px at 18% -12%, rgba(78, 40, 170, 0.75), transparent 58%),
-    radial-gradient(1000px 700px at 82% 18%, rgba(58, 28, 150, 0.65), transparent 60%),
-    radial-gradient(800px 900px at 50% 88%, rgba(44, 20, 120, 0.6), transparent 62%),
-    linear-gradient(180deg, #050320 0%, #0A0430 55%, #070320 100%);
+    linear-gradient(174.25deg,
+      #0B042D 24.9%,
+      #1F0B80 39.2%,
+      #0B042F 72.02%,
+      #241085 106.54%);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--text-main);
   overflow-x: clip;
   scrollbar-width: none;
@@ -91,6 +111,7 @@ section[id] {
     margin-right: auto;
   }
 }
+
 main {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -113,4 +134,3 @@ main {
     scroll-margin-top: calc(var(--header-height-mobile) + 20px);
   }
 }
-

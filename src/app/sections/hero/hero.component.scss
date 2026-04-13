@@ -1,10 +1,10 @@
-.hero { 
+.hero {
   position: relative;
-  min-height: 100vh;  
+  min-height: 100vh;
   padding: clamp(24px, 6vw, 40px) var(--page-pad) clamp(20px, 5vw, 48px);
   box-sizing: border-box;
   display: flex;
-  align-items: center;            
+  align-items: end;
   justify-content: space-between;
 
   width: 100%;
@@ -15,21 +15,21 @@
 
 .hero-content {
   width: 100%;
-  display: flex;
+  display: flex end;
   justify-content: space-between;
   align-items: center;
   gap: 56px;
-  padding-left: clamp(24px, 6vw, 96px);
-  padding-top: clamp(12px, 4vw, 56px);
+  padding-top: clamp(12px, 4vw, 80px);
   position: relative;
   z-index: 1;
+  padding-bottom: 0px;
 }
 
 
 .hero-text {
   margin-left: 0;
   max-width: 720px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-main);
 }
 
 .hero-role {
@@ -58,7 +58,7 @@
   flex: 0 0 auto;
   margin-right: 0;
   max-width: clamp(280px, 38vw, 520px);
-  transform: translateY(0);      
+  transform: translateY(0);
   position: relative;
   z-index: 1;
 }
@@ -74,10 +74,10 @@
 
 .hero-contact-vertical {
   position: absolute;
-  left: var(--page-pad);                        
+  left: var(--page-pad);
   top: 24%;
-  margin-left: 0;                          
-  transform: translateY(-50%);       
+  margin-left: 0;
+  transform: translateY(-50%) rotate(180deg);
   z-index: 2;
   padding: 36px 10px;
 
@@ -87,15 +87,16 @@
   border: 1px solid #00F2C9;
   background: transparent;
   color: #E15544;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 14px;
+  font-family: var(--font-main);
+  font-size: 16px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;
   box-shadow: none;
+
   &:hover {
-     border: 1px solid #00F2C9;
-    color:  #00F2C9;
+    border: 1px solid #00F2C9;
+    color: #00F2C9;
   }
 }
 
@@ -103,19 +104,65 @@
 .hero-arrow {
   position: absolute;
   left: 50%;
-  top: 44%;                         
+  top: 44%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  font-size: 28px;
-  color: #E15544;
-  opacity: 1;
   margin-left: 0;
+  width: 38px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  &::before {
+    top: 10px;
+    left: 50%;
+    width: 2px;
+    height: 34px;
+    background: #00F2C9;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    bottom: 13px;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    border-right: 2px solid #00F2C9;
+    border-bottom: 2px solid #00F2C9;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  &:hover {
+    border-color: #00F2C9;
+
+    img {
+      opacity: 0;
+    }
+
+    &::before,
+    &::after {
+      opacity: 1;
+    }
+  }
 }
 
 .hero-arrow img {
   width: 18px;
   height: auto;
   display: block;
+  transition: opacity 0.2s ease;
 }
 
 @media (max-width: 1200px) and (min-width: 901px) {
@@ -126,7 +173,7 @@
   }
 
   .hero-photo-wrapper {
-    transform: translateY(0); 
+    transform: translateY(0);
   }
 
   .hero-contact-vertical {
@@ -147,9 +194,9 @@
 @media (max-width: 900px) {
   .hero {
     padding: 32px var(--page-pad) 56px;
-    min-height: 100vh;
+    min-height: 50%;
 
-   
+
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -162,7 +209,7 @@
     margin: 0;
     max-width: 320px;
     width: 100%;
-    transform: none; 
+    transform: none;
     display: flex;
     justify-content: center;
   }
@@ -171,6 +218,12 @@
     width: 100%;
     height: auto;
     display: block;
+
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background: transparent !important;
+    filter: none !important;
   }
 
 
@@ -184,11 +237,11 @@
   }
 
   .hero-text {
-    margin-left: 0;      
+    margin-left: 0;
     max-width: 100%;
   }
 
- 
+
   .hero-name {
     font-size: clamp(28px, 7vw, 44px);
     line-height: 1.1;
@@ -202,10 +255,9 @@
     white-space: normal;
   }
 
-  
+
   .hero-contact-vertical,
   .hero-arrow {
     display: none;
   }
 }
-
