@@ -7,7 +7,7 @@
 
 .skills-title {
   margin: 0 0 32px;
-  font-size: clamp(32px, 4.2vw, 56px);
+  font-size: 54px;
   font-weight: 700;
   color: #E15544;
   letter-spacing: 0.06em;
@@ -23,11 +23,15 @@
 
 
 .skills-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(36px, 6vw, 96px);
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(120px, 1fr));
+  gap: clamp(24px, 4vw, 72px);
+  justify-items: center;
   width: 100%;
+}
+
+.skills-row + .skills-row {
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
 }
 
 .skills-row+.skills-row {
@@ -67,8 +71,8 @@
 
 
 .skill-name {
-  color: var(--primary);
-  font-size: clamp(12px, 1.2vw, 16px);
+  color: #02F4BF;
+  font-size: 18px;
   line-height: 1.3;
   white-space: pre-line;
 }
@@ -92,6 +96,13 @@
 
 
 @media (max-width: 900px) {
+    .skills-row {
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
+    }
+
+    .skills-row + .skills-row {
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
   .desktop-only {
     display: none;
   }

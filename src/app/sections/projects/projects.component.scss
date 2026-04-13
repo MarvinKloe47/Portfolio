@@ -6,7 +6,7 @@
 
 .projects-title {
   margin: 0 0 40px;
-  font-size: clamp(32px, 4.2vw, 56px);
+  font-size: 54px;
   font-weight: 700;
   color: #e15544;
   letter-spacing: 0.06em;
@@ -67,7 +67,7 @@
 .project-description {
   margin: 0 0 24px;
   color: var(--text-main);
-  font-size: clamp(14px, 1.2vw, 16px);
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -103,7 +103,7 @@
   justify-content: center;
   padding: 10px 28px;
   font-family: var(--font-main);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;

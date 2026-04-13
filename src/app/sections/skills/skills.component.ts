@@ -15,22 +15,20 @@ interface Skill {
 })
 export class SkillsComponent {
   skillsTop: Skill[] = [
-    { name: 'Angular', icon: 'assets/icons/angular.png' },
-    { name: 'TypeScript', icon: 'assets/icons/typescript.png' },
-    { name: 'JavaScript', icon: 'assets/icons/javascript.png' },
-    { name: 'HTML5', icon: 'assets/icons/html5.png' },
-    { name: 'CSS3', icon: 'assets/icons/css.png' },
-    { name: 'Restapi', icon: 'assets/icons/restapi.png' },
-    
-    
+    { name: 'Angular', icon: 'assets/icons/Angular.png' },
+    { name: 'TypeScript', icon: 'assets/icons/TypeCript.png' },
+    { name: 'JavaScript', icon: 'assets/icons/JavaScript.png' },
+    { name: 'HTML', icon: 'assets/icons/html.png' },
+    { name: 'CSS', icon: 'assets/icons/CSS.png' },
+    { name: 'REST-API', icon: 'assets/icons/Api.png' },
   ];
 
   skillsBottom: Skill[] = [
-    {name: 'Firebase', icon: 'assets/icons/firebase.png' },
-    {name: 'Git', icon: 'assets/icons/git.png' },
-    {name: 'Scrum', icon: 'assets/icons/scrum.png' },
-    {name: 'Materialdesign', icon: 'assets/icons/materialdesign.png' },
-    {name: 'challenge', icon: 'assets/icons/challenge.png' },
+    { name: 'Supabase', icon: 'assets/icons/Supabase.png' },
+    { name: 'Git', icon: 'assets/icons/Git.png' },
+    { name: 'Scrum', icon: 'assets/icons/scrum.png' },
+    { name: 'Material design', icon: 'assets/icons/material.png' },
+    { name: 'Challenge me', icon: 'assets/icons/ChallengeMe.png' },
 
   ];
 

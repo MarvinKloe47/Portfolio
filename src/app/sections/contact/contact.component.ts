@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { HttpClient, HttpClientModule, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TranslationService } from '../../services/translation/translation.service';
@@ -60,16 +60,26 @@ export class ContactComponent {
       .post(
         this.mailEndpoint,
         { name, email, message },
-        { responseType: 'text' }
+        { responseType: 'text', observe: 'response' }
       )
       .subscribe({
-          next: () => {
-            this.contactForm.reset({ privacy: false });
-            this.setStatus('success', 'form_status_success');
+          next: (response: HttpResponse<string>) => {
+            if (response.status >= 200 && response.status < 300) {
+              this.contactForm.reset({ privacy: false });
+              this.setStatus('success', 'form_status_success');
+            } else {
+              this.setStatus('error', 'form_status_error');
+            }
           },
           error: (error: HttpErrorResponse) => {
             this.submitErrorDetail = this.getErrorDetail(error);
             this.setStatus('error', 'form_status_error');
+          },
+          complete: () => {
+            if (this.submitStatus === 'sending') {
+              this.contactForm.reset({ privacy: false });
+              this.setStatus('success', 'form_status_success');
+            }
           }
       });
   }

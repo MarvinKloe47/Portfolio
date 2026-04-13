@@ -7,9 +7,15 @@
   cursor: pointer;
 }
 
-.Logo {
-  height: 48px;
-  width: auto;
+.logo-text {
+  font-family: 'Handjet', cursive;
+  font-size: 48px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1;
+  color: #E15544;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .header {
@@ -18,7 +24,7 @@
   top: 0;
   z-index: 1000;
 
-  height: 64px;
+  min-height: 64px;
   padding: 10px var(--page-pad);
   display: flex;
   align-items: center;
@@ -54,7 +60,7 @@
   padding: 0;
   color: #E15544;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 120%;
   cursor: pointer;
 
@@ -74,8 +80,8 @@
 .lang {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 14px;
+  gap: 6px;
+  font-size: 18px !important;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #E15544;
