@@ -115,6 +115,9 @@
          [attr.role]="submitStatus === 'error' ? 'alert' : 'status'"
          aria-live="polite">
       {{ translate.t(submitMessageKey) }}
+        <span *ngIf="submitStatus === 'error' && submitErrorDetail">
+          {{ submitErrorDetail }}
+        </span>
     </div>
   </form>
 </section>

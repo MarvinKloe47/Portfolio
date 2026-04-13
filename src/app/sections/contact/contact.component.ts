@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TranslationService } from '../../services/translation/translation.service';
@@ -14,7 +14,7 @@ import { TranslationService } from '../../services/translation/translation.servi
 })
 export class ContactComponent {
   contactForm: FormGroup;
-  private readonly mailEndpoint = 'http://marvin-kloesters.de/sendMail.php';
+  private readonly mailEndpoint = 'https://marvin-kloesters.de/sendMail.php';
   submitStatus: 'idle' | 'sending' | 'success' | 'error' = 'idle';
   submitMessageKey:
     | 'form_status_sending'
@@ -22,6 +22,7 @@ export class ContactComponent {
     | 'form_status_error'
     | 'form_status_invalid'
     | null = null;
+  submitErrorDetail = '';
   private statusTimer: ReturnType<typeof setTimeout> | null = null;
 
   constructor(
@@ -66,7 +67,8 @@ export class ContactComponent {
             this.contactForm.reset({ privacy: false });
             this.setStatus('success', 'form_status_success');
           },
-          error: () => {
+          error: (error: HttpErrorResponse) => {
+            this.submitErrorDetail = this.getErrorDetail(error);
             this.setStatus('error', 'form_status_error');
           }
       });
@@ -83,6 +85,10 @@ export class ContactComponent {
     this.submitStatus = status;
     this.submitMessageKey = messageKey;
 
+    if (status !== 'error') {
+      this.submitErrorDetail = '';
+    }
+
     if (this.statusTimer) {
       clearTimeout(this.statusTimer);
       this.statusTimer = null;
@@ -92,7 +98,16 @@ export class ContactComponent {
       this.statusTimer = setTimeout(() => {
         this.submitStatus = 'idle';
         this.submitMessageKey = null;
+        this.submitErrorDetail = '';
       }, 6000);
     }
+  }
+
+  private getErrorDetail(error: HttpErrorResponse): string {
+    if (error.status === 0) {
+      return 'Network blocked or mixed content. Please check HTTPS.';
+    }
+
+    return `Request failed (${error.status}${error.statusText ? ` ${error.statusText}` : ''}).`;
   }
 }
