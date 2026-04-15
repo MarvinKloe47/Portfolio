@@ -1,36 +1,30 @@
 <footer class="footer">
   <div class="footer-inner">
-
-    
     <div class="footer-logo">
-      <div class="footer-logo-main">&lt;MK&gt;</div>
-      <div class="footer-logo-sub">frontend developer</div>
+      <div class="footer-logo-main">{{ translate.t('footer_signature') }}</div>
+      <div class="footer-logo-sub">{{ translate.t('footer_role') }}</div>
     </div>
 
-    
     <div class="footer-center">
       <div class="footer-copy">
-        © Marvin Klösters 2025
+        {{ translate.t('footer_copyright') }}
       </div>
       <div class="footer-links">
-        <a routerLink="/imprint">Legal notice</a>
-        <span>  </span>
-       
+        <a routerLink="/imprint">{{ translate.t('footer_legal') }}</a>
+        <a routerLink="/privacy">{{ translate.t('footer_privacy') }}</a>
       </div>
     </div>
 
-   
     <div class="footer-social">
       <a href="https://github.com/MarvinKloe47/" target="_blank" rel="noopener noreferrer">
-        <img src="assets/icons/github-footer.png" alt="GitHub" />
+        <img src="assets/icons/github-footer.png" [alt]="translate.t('footer_github')" />
       </a>
       <a href="mailto:marvin.kloesters@omexom.com">
-        <img src="assets/icons/mail-footer.png" alt="Mail" />
+        <img src="assets/icons/mail-footer.png" [alt]="translate.t('footer_mail')" />
       </a>
       <a href="https://de.linkedin.com/in/marvin-kl%C3%B6sters-5823062b9" target="_blank" rel="noopener noreferrer">
-        <img src="assets/icons/linkedin-footer.png" alt="LinkedIn" />
+        <img src="assets/icons/linkedin-footer.png" [alt]="translate.t('footer_linkedin')" />
       </a>
     </div>
-
   </div>
 </footer>
