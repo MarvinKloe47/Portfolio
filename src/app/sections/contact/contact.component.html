@@ -51,7 +51,10 @@
              type="text"
              formControlName="name"
              [placeholder]="translate.t('form_name')" />
-      <div class="contact-error" *ngIf="name?.invalid && name?.touched">
+      <div
+           class="contact-error"
+           [class.is-visible]="name?.invalid && name?.touched"
+           [attr.aria-hidden]="!(name?.invalid && name?.touched)">
         {{ translate.t('contact_error_name') }}
       </div>
     </div>
@@ -61,7 +64,10 @@
                 formControlName="message"
                 rows="5"
                 [placeholder]="translate.t('form_message')"></textarea>
-      <div class="contact-error" *ngIf="message?.invalid && message?.touched">
+      <div
+           class="contact-error"
+           [class.is-visible]="message?.invalid && message?.touched"
+           [attr.aria-hidden]="!(message?.invalid && message?.touched)">
         {{ translate.t('contact_error_message') }}
       </div>
     </div>
@@ -71,7 +77,10 @@
              type="email"
              formControlName="email"
              [placeholder]="translate.t('form_email')" />
-      <div class="contact-error" *ngIf="email?.invalid && email?.touched">
+      <div
+           class="contact-error"
+           [class.is-visible]="email?.invalid && email?.touched"
+           [attr.aria-hidden]="!(email?.invalid && email?.touched)">
         {{ translate.t('contact_error_email') }}
       </div>
     </div>
@@ -88,7 +97,10 @@
         </span>
       </label>
 
-      <div class="contact-error" *ngIf="privacy?.invalid && privacy?.touched">
+      <div
+           class="contact-error"
+           [class.is-visible]="privacy?.invalid && privacy?.touched"
+           [attr.aria-hidden]="!(privacy?.invalid && privacy?.touched)">
         {{ translate.t('contact_error_privacy') }}
       </div>
     </div>
