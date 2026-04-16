@@ -59,7 +59,8 @@
 .hero-photo-wrapper {
   flex: 0 0 auto;
   margin-right: 0;
-  max-width: clamp(280px, 38vw, 520px);
+  width: clamp(400px, 50vw, 700px);
+  max-width: 700px;
   transform: translateY(calc(clamp(-36px, -2.2vw, -16px) - 30px));
   position: relative;
   z-index: 1;
@@ -276,7 +277,7 @@
   }
 
   .hero-role {
-    font-size: clamp(12px, 3.4vw, 16px);
+    font-size: 16px;
     margin-bottom: 12px;
     letter-spacing: 0.18em;
     white-space: normal;

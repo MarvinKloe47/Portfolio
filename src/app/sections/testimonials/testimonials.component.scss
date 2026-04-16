@@ -68,13 +68,13 @@
 
 .testimonial-project {
   margin: 0 0 16px;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--primary);
 }
 
 .testimonial-quote {
   margin: 0;
-  font-size: clamp(13px, 1.2vw, 15px);
+  font-size: 16px;
   line-height: 1.6;
   color: var(--primary);
 }
@@ -196,12 +196,12 @@
   }
 
   .testimonial-project {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 14px;
   }
 
   .testimonial-quote {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
   }
 }
