@@ -14,7 +14,9 @@
 
 
 .hero-content {
-  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +60,7 @@
   flex: 0 0 auto;
   margin-right: 0;
   max-width: clamp(280px, 38vw, 520px);
-  transform: translateY(0);
+  transform: translateY(calc(clamp(-36px, -2.2vw, -16px) - 30px));
   position: relative;
   z-index: 1;
 }
@@ -165,15 +167,38 @@
   transition: opacity 0.2s ease;
 }
 
-@media (max-width: 1200px) and (min-width: 901px) {
+@media (max-width: 1400px) and (min-width: 901px) {
+  .hero {
+    min-height: calc(100vh - var(--header-height));
+    align-items: center;
+  }
+
   .hero-content {
     gap: 24px;
     padding-left: 0;
-    padding-top: clamp(8px, 3vw, 36px);
+    padding-top: clamp(40px, 7vw, 88px);
+  }
+
+  .hero-text {
+    max-width: min(62vw, 660px);
+  }
+
+  .hero-role {
+    font-size: clamp(36px, 4vw, 48px);
+  }
+
+  .hero-name {
+    font-size: clamp(54px, 6vw, 72px);
   }
 
   .hero-photo-wrapper {
-    transform: translateY(0);
+    flex-basis: clamp(300px, 33vw, 410px);
+    max-width: clamp(300px, 33vw, 410px);
+    transform: translateY(calc(clamp(-28px, -2vw, -12px) - 30px));
+  }
+
+  .hero-arrow {
+    top: 32%;
   }
 
   .hero-contact-vertical {
