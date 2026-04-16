@@ -93,11 +93,14 @@ section {
   box-sizing: border-box;
 }
 
-app-home,
 app-imprint,
 app-privacy {
   display: block;
   padding-top: var(--header-height);
+}
+
+app-home {
+  display: block;
 }
 
 section[id] {
@@ -125,7 +128,6 @@ main {
     scroll-padding-top: var(--header-height-mobile);
   }
 
-  app-home,
   app-imprint,
   app-privacy {
     padding-top: var(--header-height-mobile);

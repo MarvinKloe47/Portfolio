@@ -94,7 +94,8 @@
     color: inherit;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &.active {
       color: #02F4BF;
     }
   }
@@ -192,7 +193,8 @@
     color: inherit;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &.active {
       color: #02F4BF;
     }
   }
