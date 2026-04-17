@@ -6,7 +6,6 @@
       </button>
     </div>
 
-    
     <nav class="nav">
       <button class="nav-link" type="button" (click)="scrollToSection('about')">
         {{ translate.t('nav_whyMe') }}
@@ -23,7 +22,6 @@
     </nav>
 
     <div class="header-right">
-      
       <div class="lang">
         <button
           type="button"
@@ -32,7 +30,7 @@
         >
           DE
         </button>
-        <span>|</span>
+        <span class="lang-separator">|</span>
         <button
           type="button"
           (click)="setLang('en')"
@@ -42,7 +40,6 @@
         </button>
       </div>
 
-      
       <button
         class="burger"
         type="button"
@@ -54,12 +51,11 @@
           <i></i><i></i><i></i>
         </span>
 
-        <span class="closeIcon" *ngIf="menuOpen">×</span>
+        <span class="closeIcon" *ngIf="menuOpen">&times;</span>
       </button>
     </div>
   </div>
 </header>
-
 
 <div class="mobileOverlay" *ngIf="menuOpen" (click)="closeMenu()">
   <div class="mobilePanel" (click)="$event.stopPropagation()">
@@ -78,7 +74,6 @@
       </button>
     </nav>
 
-    
     <div class="mobileLang">
       <button
         type="button"
@@ -87,7 +82,7 @@
       >
         DE
       </button>
-      <span>|</span>
+      <span class="lang-separator">|</span>
       <button
         type="button"
         (click)="setLang('en')"

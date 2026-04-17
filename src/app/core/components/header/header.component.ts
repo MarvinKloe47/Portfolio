@@ -37,7 +37,7 @@ export class HeaderComponent {
   }
 
   scrollToTop(): void {
-    if (this.router.url !== '/') {
+    if (!this.isHomeRoute()) {
       this.router.navigateByUrl('/').then(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
@@ -49,14 +49,14 @@ export class HeaderComponent {
 
   scrollToSection(sectionId: string): void {
     const doScroll = () => {
-      this.scrollElementIntoHeaderView(sectionId);
+      this.scrollElementIntoHeaderView(sectionId, 20);
     };
 
     this.closeMenu();
 
-    if (this.router.url !== '/') {
+    if (!this.isHomeRoute()) {
       this.router.navigateByUrl('/').then(() => {
-        setTimeout(doScroll, 50);
+        requestAnimationFrame(doScroll);
       });
       return;
     }
@@ -64,9 +64,19 @@ export class HeaderComponent {
     doScroll();
   }
 
-  private scrollElementIntoHeaderView(elementId: string): void {
+  private isHomeRoute(): boolean {
+    return this.router.url.split('?')[0].split('#')[0] === '/';
+  }
+
+  private scrollElementIntoHeaderView(elementId: string, retries = 0): void {
     const element = document.getElementById(elementId);
     if (!element) {
+      if (retries > 0) {
+        requestAnimationFrame(() => {
+          this.scrollElementIntoHeaderView(elementId, retries - 1);
+        });
+      }
+
       return;
     }
 

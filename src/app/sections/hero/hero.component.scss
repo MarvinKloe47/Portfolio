@@ -170,6 +170,29 @@
   transition: opacity 0.2s ease;
 }
 
+@media (max-width: 1600px) and (min-width: 1401px) {
+  .hero-content {
+    gap: 32px;
+  }
+
+  .hero-text {
+    max-width: min(50vw, 700px);
+  }
+
+  .hero-role {
+    font-size: clamp(44px, 3.5vw, 52px);
+  }
+
+  .hero-name {
+    font-size: clamp(68px, 5vw, 78px);
+  }
+
+  .hero-photo-wrapper {
+    width: clamp(500px, 40vw, 600px);
+    max-width: 600px;
+  }
+}
+
 @media (max-width: 1400px) and (min-width: 901px) {
   .hero {
     min-height: 100vh;

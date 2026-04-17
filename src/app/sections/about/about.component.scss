@@ -313,8 +313,8 @@
   }
 
   .about-title {
-    align-self: flex-start;
-    text-align: left;
+    align-self: center;
+    text-align: center;
   }
 
   .about-i-am {
@@ -355,6 +355,8 @@
   }
 
   .about-title {
+    align-self: center;
+    text-align: center;
     font-size: clamp(26px, 6.5vw, 32px);
     margin: 0 0 20px;
   }

@@ -65,7 +65,13 @@
   background: none;
   border: none;
   color: #E15544;
-  font-size: 28px;
+  font-size: 40px;
+  line-height: 1;
+  width: 56px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  transform: scaleX(1.25);
   cursor: pointer;
 }
 
